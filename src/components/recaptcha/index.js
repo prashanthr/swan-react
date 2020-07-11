@@ -1,7 +1,8 @@
 import React, { Fragment, useState } from 'react'
 import PropTypes from 'prop-types'
 import RecaptchaWidget from './widget'
-import { DefaultSuccessComponent, DefaultWrapComponent } from './components'
+import DefaultSuccessComponent from './components/default-success'
+import DefaultWrapComponent from './components/default-wrap'
 
 const Recaptcha = ({ 
   version,
@@ -24,7 +25,7 @@ const Recaptcha = ({
     <div>
       {wrapComponent || DefaultWrapComponent}
       {(
-        <GoogleRecaptchaWidget
+        <RecaptchaWidget
           version={version} 
           recaptchaKey={recaptchaKey}
           onInteractionVerify={onInteractionVerify}

@@ -1,5 +1,6 @@
-import ReactGoogleRecaptcha from 'react-google-recaptcha'
+import React from 'react'
 import PropTypes from 'prop-types'
+import ReactGoogleRecaptcha from 'react-google-recaptcha'
 
 const ReactGoogleRecaptchaV2 = ({
   recaptchaKey,

@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import GooleRecaptchaV2 from './recaptcha-v2'
 import GoogleRecaptchaV3 from './recaptcha-v3'
 
@@ -6,6 +8,7 @@ const GoogleRecaptchaWidget = ({
   recaptchaKey,
   onInteractionVerify,
   onInteractionExpire,
+  onInteractionError,
   recaptchaType,
   recaptchaTheme,
   recaptchaLanguage
@@ -15,6 +18,7 @@ const GoogleRecaptchaWidget = ({
     case '3':
       return (
         <GoogleRecaptchaV3
+          recaptchaKey={recaptchaLanguage}
           recaptchaKey={recaptchaKey}
           onInteractionVerify={onInteractionVerify}
         />
@@ -24,6 +28,7 @@ const GoogleRecaptchaWidget = ({
     default:
       return (
         <GooleRecaptchaV2
+          recaptchaLanguage={recaptchaLanguage}
           recaptchaKey={recaptchaKey}
           onInteractionVerify={onInteractionVerify}
           onInteractionExpire={onInteractionExpire}
