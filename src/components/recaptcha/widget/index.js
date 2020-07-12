@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import GooleRecaptchaV2 from './recaptcha-v2'
 import GoogleRecaptchaV3 from './recaptcha-v3'
 
-const GoogleRecaptchaWidget = ({ 
+const GoogleRecaptchaWidget = ({
   version,
   recaptchaKey,
   onInteractionVerify,
@@ -18,7 +18,7 @@ const GoogleRecaptchaWidget = ({
     case '3':
       return (
         <GoogleRecaptchaV3
-          recaptchaKey={recaptchaLanguage}
+          recaptchaLanguage={recaptchaLanguage}
           recaptchaKey={recaptchaKey}
           onInteractionVerify={onInteractionVerify}
         />
