@@ -1,8 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import PropTypes from 'prop-types'
 import RecaptchaWidget from './widget'
-import DefaultSuccessComponent from './components/default-success'
-import DefaultWrapComponent from './components/default-wrap'
+import { DefaultSuccessComponent, DefaultWrapComponent } from './components'
 
 const Recaptcha = ({ 
   version,
