@@ -1,6 +1,6 @@
 {
   "name": "@universal-apps/swan-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Re-usable React Components",
   "main": "lib/swan-react.js",
   "author": "Prashanth R <1409501+prashanthr@users.noreply.github.com>",
@@ -11,7 +11,12 @@
   "bugs": {
     "url": "https://github.com/prashanthr/swan-react/issues"
   },
-  "keywords": ["react", "components", "library", "reuse"],
+  "keywords": [
+    "react",
+    "components",
+    "library",
+    "reuse"
+  ],
   "files": [
     "lib/**.*"
   ],
