@@ -1,5 +1,5 @@
 {
-  "name": "swan-react",
+  "name": "@universal-apps/swan-react",
   "version": "0.0.1",
   "description": "Re-usable React Components",
   "main": "lib/swan-react.js",
@@ -7,7 +7,12 @@
   "author": "Prashanth R <1409501+prashanthr@users.noreply.github.com>",
   "license": "MIT",
   "private": false,
-  "files": ["lib/**.*"],
+  "files": [
+    "lib/**.*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",
@@ -21,7 +26,7 @@
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
     "html-webpack-plugin": "^4.3.0",
-    "standard-version": "^8.0.0",
+    "standard-version": "^8.0.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
   },
@@ -37,10 +42,11 @@
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
     "build-dev": "webpack --mode development",
-	  "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "release": "standard-version",
     "pk": "yarn pack",
-    "pub": "yarn build && yarn publish"
+    "takeoff": "yarn pack && yarn build && yarn publish"
   }
 }
