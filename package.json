@@ -1,6 +1,6 @@
 {
   "name": "swan-react",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Re-usable React Components",
   "main": "lib/swan-react.js",
   "repository": "git@github.com:prashanthr/swan-react.git",
@@ -25,9 +25,11 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
   },
-  "dependencies": {
+  "peerDependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
+    "react": "^16.13.1"
+  },
+  "dependencies": {
     "react-google-recaptcha": "^2.1.0",
     "react-google-recaptcha-v3": "^1.5.2"
   },
@@ -37,6 +39,8 @@
     "build-dev": "webpack --mode development",
 	  "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "pk": "yarn pack",
+    "pub": "yarn build && yarn publish"
   }
 }
