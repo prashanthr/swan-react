@@ -57,7 +57,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "release": "standard-version",
-    "pk": "yarn pack",
+    "pk": "yarn build && yarn pack",
     "takeoff": "yarn pack && yarn build && yarn publish"
   }
 }
