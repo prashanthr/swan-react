@@ -20,7 +20,6 @@
   "files": [
     "lib/**.*"
   ],
-  "typings": "lib/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -52,6 +51,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "copy-types": "cp -r ./types/ ./lib",
+    "build-ts": "tsc",
     "build": "webpack --mode production && yarn copy-types",
     "build-dev": "webpack --mode development && yarn copy-types",
     "test": "echo \"Error: no test specified\" && exit 1",

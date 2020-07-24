@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+      "module": "UMD", // "CommonJS"
+      "noImplicitAny": true,
+      "removeComments": false,
+      "preserveConstEnums": true,
+      "outDir": "./lib",
+      "sourceMap": true,
+      "allowJs": true,
+      "declaration": true,
+      "moduleResolution": "node"
+  },
+  "include": [
+      "src/**/*"
+  ],
+  "exclude": [
+      "stories",
+      "test",
+      "node_modules",
+      "**/*.spec.ts",
+      "types"
+  ]
+}
