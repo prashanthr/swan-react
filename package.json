@@ -1,6 +1,6 @@
 {
   "name": "@universal-apps/swan-react",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Re-usable React Components",
   "main": "lib/index.js",
   "author": "Prashanth R <1409501+prashanthr@users.noreply.github.com>",
