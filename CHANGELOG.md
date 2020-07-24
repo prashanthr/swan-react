@@ -2,4 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/prashanthr/swan-react/compare/v0.0.2...v0.0.3) (2020-07-24)
+
+
+### Features
+
+* **ch90:** Add typings for recaptcha ([#2](https://github.com/prashanthr/swan-react/issues/2)) ([7210b50](https://github.com/prashanthr/swan-react/commit/7210b507a38f6af36e1c3a91669fcb80027b8015))
+
 ### 0.0.2 (2020-07-15)
