@@ -2,7 +2,7 @@ const path = require('path')
 const TARGET_DIR = 'lib'
 const TARGET_FILE_NAME = 'swan-react.js'
 const ENTRYPOINT = './src/index.js'
-const LIBRARY_TARGET = 'umd' // 'commonjs2'
+const LIBRARY_TARGET = 'commonjs2' // 'umd'
 
 module.exports = {
   entry: ENTRYPOINT,
