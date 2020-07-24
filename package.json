@@ -57,7 +57,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "release": "standard-version",
+    "save-release": "git push --follow-tags origin master",
     "pk": "yarn build && yarn pack",
-    "takeoff": "yarn pack && yarn build && yarn publish"
+    "takeoff": "yarn release && yarn save-release && yarn pack && yarn build && yarn publish"
   }
 }
