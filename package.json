@@ -50,13 +50,14 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production",
-    "build-dev": "webpack --mode development",
+    "copy-types": "cp -r ./types/ ./lib",
+    "build": "webpack --mode production && yarn copy-types",
+    "build-dev": "webpack --mode development && yarn copy-types",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "release": "standard-version",
-    "pk": "yarn pack",
+    "pk": "yarn build && yarn pack",
     "takeoff": "yarn pack && yarn build && yarn publish"
   }
 }
