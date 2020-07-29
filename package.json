@@ -61,7 +61,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "yarn clean-storybook && build-storybook -o ./docs",
-    "build-all": "yarn build-storybook && yarn build",
     "release": "standard-version",
     "save-release": "git push --follow-tags origin master",
     "pk": "rm -rf ./*swan-react*.tgz && yarn pack",
