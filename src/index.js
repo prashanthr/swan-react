@@ -1,5 +1,5 @@
-import Recaptcha from './components/Recaptcha'
+import Recaptcha from './components/recaptcha'
 
-export { 
+export {
   Recaptcha
 }

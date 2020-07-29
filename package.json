@@ -52,17 +52,19 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
-    "clean-build": "rm -rf ./lib/ ",
+    "clean-build": "rm -rf ./lib/",
+    "clean-storybook": "rm -rf ./docs/",
     "compile": "tsc",
     "build-webpack": "webpack --mode $WEBPACK_MODE",
     "build": "yarn clean-build && yarn compile && WEBPACK_MODE=production yarn build-webpack",
     "build-dev": "yarn clean-build && yarn compile && WEBPACK_MODE=development yarn build-webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "yarn clean-storybook && build-storybook -o ./docs",
+    "build-all": "yarn build-storybook && yarn build",
     "release": "standard-version",
     "save-release": "git push --follow-tags origin master",
     "pk": "rm -rf ./*swan-react*.tgz && yarn pack",
-    "takeoff": "yarn release && yarn save-release && yarn pk && yarn build && yarn publish"
+    "takeoff": "yarn release && yarn save-release && yarn pk && yarn build-all && yarn publish"
   }
 }

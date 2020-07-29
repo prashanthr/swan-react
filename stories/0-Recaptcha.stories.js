@@ -13,8 +13,8 @@ export default {
 
 export const RecaptchaWidget = () => (
   <Recaptcha
-    recaptchaKey={RECAPTCHA_V2_DEMO_KEY} 
-    onInteractionVerify={action('onInteractionVerify')} 
+    recaptchaKey={RECAPTCHA_V2_DEMO_KEY}
+    onInteractionVerify={action('onInteractionVerify')}
   />
 )
 
@@ -24,37 +24,37 @@ RecaptchaWidget.story = {
 
 
 export const RecaptchaWidgetCustomWrap = () => (
-  <Recaptcha 
+  <Recaptcha
     wrapComponent={'Are you even human?'}
-    recaptchaKey={RECAPTCHA_V2_DEMO_KEY} 
-    onInteractionVerify={action('onInteractionVerify')} 
+    recaptchaKey={RECAPTCHA_V2_DEMO_KEY}
+    onInteractionVerify={action('onInteractionVerify')}
   />
 )
 
 export const RecaptchaWidgetVerfied = () => (
-  <Recaptcha 
+  <Recaptcha
     isVerified={true}
-    recaptchaKey={RECAPTCHA_V2_DEMO_KEY} 
-    onInteractionVerify={action('onInteractionVerify')} 
+    recaptchaKey={RECAPTCHA_V2_DEMO_KEY}
+    onInteractionVerify={action('onInteractionVerify')}
   />
 )
 
 export const RecaptchaWidgetVerfiedCustomSuccess = () => (
-  <Recaptcha 
+  <Recaptcha
     isVerified={true}
     successComponent={'Well done, boss.'}
-    recaptchaKey={RECAPTCHA_V2_DEMO_KEY} 
-    onInteractionVerify={action('onInteractionVerify')} 
+    recaptchaKey={RECAPTCHA_V2_DEMO_KEY}
+    onInteractionVerify={action('onInteractionVerify')}
   />
 )
 
 export const RecaptchaWidget3 = () => (
-  <Recaptcha 
+  <Recaptcha
     version='v3'
-    recaptchaKey={RECAPTCHA_V3_DEMO_KEY} 
-    onInteractionVerify={action('onInteractionVerify')} 
+    recaptchaKey={RECAPTCHA_V3_DEMO_KEY}
+    onInteractionVerify={action('onInteractionVerify')}
   />
 )
 
 
-  
+
