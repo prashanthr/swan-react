@@ -2,7 +2,9 @@
   "name": "@universal-apps/swan-react",
   "version": "0.0.8",
   "description": "Re-usable React Components",
-  "main": "lib/index.js",
+  "main": "lib/umd/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/typings/index.d.ts",
   "author": "Prashanth R <1409501+prashanthr@users.noreply.github.com>",
   "license": "MIT",
   "private": false,
@@ -20,7 +22,6 @@
   "files": [
     "lib/**.*"
   ],
-  "types": "lib/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -51,16 +52,17 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
-    "copy-types": "cp -r ./types/ ./lib",
-    "build-ts": "tsc",
-    "build": "webpack --mode production && yarn copy-types",
-    "build-dev": "webpack --mode development && yarn copy-types",
+    "clean-build": "rm -rf ./lib/ ",
+    "compile": "tsc",
+    "build-webpack": "webpack --mode $WEBPACK_MODE",
+    "build": "yarn clean-build && yarn compile && WEBPACK_MODE=production yarn build-webpack",
+    "build-dev": "yarn clean-build && yarn compile && WEBPACK_MODE=development yarn build-webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "release": "standard-version",
     "save-release": "git push --follow-tags origin master",
-    "pk": "yarn build && yarn pack",
-    "takeoff": "yarn release && yarn save-release && yarn pack && yarn build-ts && yarn publish"
+    "pk": "rm -rf ./*swan-react*.tgz && yarn pack",
+    "takeoff": "yarn release && yarn save-release && yarn pk && yarn build && yarn publish"
   }
 }
