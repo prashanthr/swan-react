@@ -1,20 +1,23 @@
+// https://derekworthen.com/posts/authoring-typescript-libraries/
 const path = require('path')
-const TARGET_DIR = 'lib'
-const TARGET_FILE_NAME = 'swan-react.js'
-const ENTRYPOINT = './src/index.js'
-const LIBRARY_TARGET = 'commonjs2' // 'umd'
+const ENTRYPOINT = './lib/esm/index.js'
+const TARGET_DIR = 'lib/umd'
+const TARGET_FILE_NAME = 'index.js'
+const LIBRARY_TARGET = 'umd' // 'commonjs2'
+const LIBRARY_NAME = 'universal-apps-swan-react'
 
 module.exports = {
-  entry: ENTRYPOINT,
+  entry: path.resolve(__dirname, ENTRYPOINT),
   output: {
     path: path.resolve(__dirname, TARGET_DIR),
     filename: TARGET_FILE_NAME,
-    libraryTarget: LIBRARY_TARGET
+    libraryTarget: LIBRARY_TARGET,
+    library: LIBRARY_NAME
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(t|js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
