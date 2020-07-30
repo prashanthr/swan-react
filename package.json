@@ -66,6 +66,6 @@
     "release": "standard-version",
     "save-release": "git push --follow-tags origin master",
     "pk": "rm -rf ./*swan-react*.tgz && yarn pack",
-    "takeoff": "yarn storify && yarn release && yarn save-release && yarn pk && yarn build && yarn publish"
+    "takeoff": "yarn storify;yarn release && yarn save-release && yarn pk && yarn build && yarn publish"
   }
 }
