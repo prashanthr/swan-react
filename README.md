@@ -2,6 +2,8 @@
 
 Re-usable React Components
 
+[CHANGELOG](./CHANGELOG.md)
+
 ## Installation
 
 ```
