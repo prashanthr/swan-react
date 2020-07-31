@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/prashanthr/swan-react/compare/v0.0.10...v0.0.11) (2020-07-31)
+
+
+### Bug Fixes
+
+* **storybook:** Fix storybook keys for environments ([#5](https://github.com/prashanthr/swan-react/issues/5)) ([b168277](https://github.com/prashanthr/swan-react/commit/b168277201ec90b160a01a4b376fe470a956dfe8))
+
 ### [0.0.10](https://github.com/prashanthr/swan-react/compare/v0.0.9...v0.0.10) (2020-07-30)
 
 
