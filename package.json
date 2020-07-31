@@ -62,7 +62,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "yarn clean-storybook && build-storybook -o ./docs",
     "storify-gh": "git fetch && git checkout gh-pages && git pull origin gh-pages && git pull origin master --no-edit && yarn build-storybook && git push origin gh-pages && git checkout master && git clean -fd",
-    "storify": "yarn build-storybook && git add ./docs && git commit -m \"docs(storybook): Release storybook version\" && git push origin master",
+    "storify": "NODE_ENV=production yarn build-storybook && git add ./docs && git commit -m \"docs(storybook): Release storybook version\" && git push origin master",
     "release": "standard-version",
     "save-release": "git push --follow-tags origin master",
     "pk": "rm -rf ./*swan-react*.tgz && yarn pack",
