@@ -1,10 +1,9 @@
 import React from 'react'
-
+import { getRecaptchaKeys } from './utils/env'
 import { action } from '@storybook/addon-actions'
 import { Recaptcha } from '../src'
 
-const RECAPTCHA_V2_DEMO_KEY = process.env.STORYBOOK_RECAPTCHA_V2_DEMO_KEY
-const RECAPTCHA_V3_DEMO_KEY = process.env.STORYBOOK_RECAPTCHA_V3_DEMO_KEY
+const { v2Key, v3Key } = getRecaptchaKeys()
 
 export default {
   title: 'Recaptcha',
@@ -13,7 +12,7 @@ export default {
 
 export const RecaptchaWidget = () => (
   <Recaptcha
-    recaptchaKey={RECAPTCHA_V2_DEMO_KEY}
+    recaptchaKey={v2Key}
     onInteractionVerify={action('onInteractionVerify')}
   />
 )
@@ -26,7 +25,7 @@ RecaptchaWidget.story = {
 export const RecaptchaWidgetCustomWrap = () => (
   <Recaptcha
     wrapComponent={'Are you even human?'}
-    recaptchaKey={RECAPTCHA_V2_DEMO_KEY}
+    recaptchaKey={v2Key}
     onInteractionVerify={action('onInteractionVerify')}
   />
 )
@@ -34,7 +33,7 @@ export const RecaptchaWidgetCustomWrap = () => (
 export const RecaptchaWidgetVerfied = () => (
   <Recaptcha
     isVerified={true}
-    recaptchaKey={RECAPTCHA_V2_DEMO_KEY}
+    recaptchaKey={v2Key}
     onInteractionVerify={action('onInteractionVerify')}
   />
 )
@@ -43,7 +42,7 @@ export const RecaptchaWidgetVerfiedCustomSuccess = () => (
   <Recaptcha
     isVerified={true}
     successComponent={'Well done, boss.'}
-    recaptchaKey={RECAPTCHA_V2_DEMO_KEY}
+    recaptchaKey={v2Key}
     onInteractionVerify={action('onInteractionVerify')}
   />
 )
@@ -51,7 +50,7 @@ export const RecaptchaWidgetVerfiedCustomSuccess = () => (
 export const RecaptchaWidget3 = () => (
   <Recaptcha
     version='v3'
-    recaptchaKey={RECAPTCHA_V3_DEMO_KEY}
+    recaptchaKey={v3Key}
     onInteractionVerify={action('onInteractionVerify')}
   />
 )
