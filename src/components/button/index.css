@@ -1,0 +1,8 @@
+.swan-react-button {
+  display:block;
+  outline:none;
+}
+
+.swan-react-button-unbordered {
+  border: none;
+}

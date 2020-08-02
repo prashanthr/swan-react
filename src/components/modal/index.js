@@ -1,6 +1,6 @@
 import React, { cloneElement } from 'react'
 import PropTypes from 'prop-types'
-import { DefaultCloseComponent } from './components'
+import { CloseComponent } from './components'
 import './index.css'
 
 const Modal = ({
@@ -13,10 +13,10 @@ const Modal = ({
 }) => (
   <div className={`swan-react-modal ${isOpen ? 'swan-react-model-open' : ''} ${className}`}>
     <div className={`swan-react-modal-content ${contentClassName}`}>
-        {(
-          (closeComponent && cloneElement(closeComponent, { onClose }))
-          || <DefaultCloseComponent onClose={onClose} />
-        )}
+        <CloseComponent
+          component={closeComponent}
+          onClose={onClose}
+        />
         {content}
     </div>
   </div>

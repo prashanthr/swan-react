@@ -1,5 +1,5 @@
-import DefaultCloseComponent from './default-close'
+import CloseComponent from './close'
 
 export {
-  DefaultCloseComponent
+  CloseComponent
 }

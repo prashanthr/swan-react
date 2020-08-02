@@ -1,7 +1,9 @@
-import Recaptcha from './components/recaptcha'
+import Button from './components/button'
 import Modal from './components/modal'
+import Recaptcha from './components/recaptcha'
 
 export {
-  Recaptcha,
-  Modal
+  Button,
+  Modal,
+  Recaptcha
 }
