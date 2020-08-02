@@ -1,0 +1,13 @@
+.swan-react-modal-close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+
+.swan-react-modal-close-button:hover {
+  background-color: darkgray;
+}
