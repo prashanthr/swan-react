@@ -6,7 +6,7 @@ const Button = ({ withBorder, onClick, isDisabled, className, value }) => (
   <button
     onClick={onClick}
     className={`swan-react-button ${!withBorder ? 'swan-react-button-unbordered' : ''} ${className}`}
-    disabled={!!isDisabled}
+    disabled={isDisabled}
   >
     {value}
   </button>
