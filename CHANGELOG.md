@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/prashanthr/swan-react/compare/v0.0.12...v0.0.13) (2020-08-03)
+
+
+### Features
+
+* **modal, button:** Add modal and button components ([#6](https://github.com/prashanthr/swan-react/issues/6)) ([1e8b113](https://github.com/prashanthr/swan-react/commit/1e8b113a2b5ec98382e37ca33b53a7f2f313114f))
+
 ### [0.0.12](https://github.com/prashanthr/swan-react/compare/v0.0.11...v0.0.12) (2020-07-31)
 
 ### [0.0.11](https://github.com/prashanthr/swan-react/compare/v0.0.10...v0.0.11) (2020-07-31)
