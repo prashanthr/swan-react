@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.15](https://github.com/prashanthr/swan-react/compare/v0.0.14...v0.0.15) (2020-08-03)
+
+
+### Bug Fixes
+
+* **button:** Fix usage of bool prop ([e1e3303](https://github.com/prashanthr/swan-react/commit/e1e3303692cf4088350f6555f9c37b1733dfbd45))
+
 ### [0.0.14](https://github.com/prashanthr/swan-react/compare/v0.0.13...v0.0.14) (2020-08-03)
 
 
