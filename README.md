@@ -2,7 +2,9 @@
 
 Re-usable React Components
 
-[CHANGELOG](./CHANGELOG.md)
+## Component Storybook
+
+Live at https://prashanthr.github.io/swan-react/
 
 ## Installation
 
@@ -12,33 +14,17 @@ yarn add @universal-apps/swan-react
 npm i @universal-apps/swan-react
 ```
 
-## Example Usage
-
-```
-import { Recaptcha } from '@universal-apps/swan-react'
-
-// In your react component
-....
-render () {
-  return (
-    <Recaptcha
-      recaptchaSiteKey='xxxx'
-      onInteractionVerify={() => {}}
-    />
-}
-...
-```
-
 ## Components Supported
+
+- Button
+- Modal
 - ReCaptcha v2/v3
-(More coming soon...)
 
-## Storybook
-
-Live at https://prashanthr.github.io/swan-react/
-
-### Publishing changes to storybook
+## Publishing changes to storybook
 
 ```
 yarn storify
 ```
+
+## Changelog
+View the [CHANGELOG](./CHANGELOG.md)
