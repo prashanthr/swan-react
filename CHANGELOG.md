@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.16](https://github.com/prashanthr/swan-react/compare/v0.0.15...v0.0.16) (2020-08-03)
+
+
+### Bug Fixes
+
+* **tsc-target:** Fix target of tsc compile options to ES2015 ([be9639f](https://github.com/prashanthr/swan-react/commit/be9639f041613c9a06af479373638782d212a37d))
+
 ### [0.0.15](https://github.com/prashanthr/swan-react/compare/v0.0.14...v0.0.15) (2020-08-03)
 
 
