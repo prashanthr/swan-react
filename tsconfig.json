@@ -6,7 +6,7 @@
       "noImplicitAny": true,
       "removeComments": false,
       "preserveConstEnums": true,
-      "target": "ES6",
+      "target": "ES2015",
       "outDir": "./lib/esm",
       "sourceMap": true,
       "allowJs": true,
