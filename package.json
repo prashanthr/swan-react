@@ -3,7 +3,6 @@
   "version": "0.0.16",
   "description": "Re-usable React Components",
   "main": "lib/umd/index.js",
-  "module": "lib/esm/index.js",
   "types": "lib/typings/index.d.ts",
   "author": "Prashanth R <1409501+prashanthr@users.noreply.github.com>",
   "license": "MIT",
