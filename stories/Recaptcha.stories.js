@@ -8,7 +8,7 @@ const { v2Key, v3Key } = getRecaptchaKeys()
 export default {
   title: 'Recaptcha',
   component: Recaptcha,
-};
+}
 
 export const RecaptchaWidget = () => (
   <Recaptcha
