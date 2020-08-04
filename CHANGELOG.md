@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.18](https://github.com/prashanthr/swan-react/compare/v0.0.17...v0.0.18) (2020-08-04)
+
+
+### Bug Fixes
+
+* **modal:** Fix handling of close component ([#7](https://github.com/prashanthr/swan-react/issues/7)) ([b321e8a](https://github.com/prashanthr/swan-react/commit/b321e8a63a81ce5c01abe397df0c359b5d3cf198))
+
 ### [0.0.17](https://github.com/prashanthr/swan-react/compare/v0.0.16...v0.0.17) (2020-08-03)
 
 

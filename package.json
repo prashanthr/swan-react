@@ -1,6 +1,6 @@
 {
   "name": "@universal-apps/swan-react",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Re-usable React Components",
   "main": "lib/umd/index.js",
   "types": "lib/typings/index.d.ts",
