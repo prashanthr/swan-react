@@ -2,9 +2,8 @@
 
 Re-usable React Components
 
-## Component Storybook
-
-Live at https://prashanthr.github.io/swan-react/
+## Demo
+View the components live at https://prashanthr.github.io/swan-react/
 
 ## Installation
 
@@ -19,6 +18,7 @@ npm i @universal-apps/swan-react
 - Button
 - Modal
 - ReCaptcha v2/v3
+- Spotify Player Widget
 
 ## Publishing changes to storybook
 
