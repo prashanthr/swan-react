@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { action } from '@storybook/addon-actions'
-import { Modal, Button } from '../src'
+import { Modal, Button } from '../../src'
 import './modal.css'
 
 export default {

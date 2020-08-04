@@ -1,7 +1,7 @@
 import React from 'react'
-import { getRecaptchaKeys } from './utils/env'
+import { getRecaptchaKeys } from '../utils/env'
 import { action } from '@storybook/addon-actions'
-import { Recaptcha } from '../src'
+import { Recaptcha } from '../../src'
 
 const { v2Key, v3Key } = getRecaptchaKeys()
 
