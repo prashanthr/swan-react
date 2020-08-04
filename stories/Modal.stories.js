@@ -53,6 +53,33 @@ export const ModalCustomWidget = () => {
   )
 }
 
+export const ModalCustomClose = () => {
+  const [isModalOpen, toggleModal] = useState(false)
+  const CloseComponent = ({ onClose }) => (
+    <Button
+      onClick={onClose}
+      className='custom-close-btn'
+      value={'Close'}
+    />
+  )
+  return (
+    <div>
+      <Button
+        onClick={() => toggleModal(!isModalOpen)}
+        value='Toggle Modal'
+        withBorder
+      />
+      <Modal
+        isOpen={isModalOpen}
+        closeComponent={CloseComponent}
+        content={'Hello modal!'}
+        contentClassName='custom-modal-content'
+        onClose={() => toggleModal(!isModalOpen)}
+      />
+    </div>
+  )
+}
+
 ModalWidget.story = {
   name: 'Modal'
 }
