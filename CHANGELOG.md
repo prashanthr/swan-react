@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.20](https://github.com/prashanthr/swan-react/compare/v0.0.19...v0.0.20) (2020-09-01)
+
+
+### Features
+
+* **card:** Add generic card component [ch122] ([#9](https://github.com/prashanthr/swan-react/issues/9)) ([1859315](https://github.com/prashanthr/swan-react/commit/1859315786de9945596244c49ec9d301a322cf36))
+
 ### [0.0.19](https://github.com/prashanthr/swan-react/compare/v0.0.18...v0.0.19) (2020-08-04)
 
 
