@@ -17,7 +17,8 @@ const Card = ({ className, contentClassName, content, isRounded }) => (
 Card.propTypes = {
   className: PropTypes.string,
   contentClassName: PropTypes.string,
-  isRounded: PropTypes.bool
+  isRounded: PropTypes.bool,
+  content: PropTypes.element
 }
 
 Card.defaultProps = {
