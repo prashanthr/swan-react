@@ -105,3 +105,6 @@ dist
 
 # lib
 lib
+
+# VS CODE
+.vscode
