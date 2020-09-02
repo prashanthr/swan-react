@@ -1,0 +1,9 @@
+.swan-timer-countdown-wrap {
+  font-size: 205px;
+  display: inline-flex;
+}
+
+.swan-timer-countdown-digit {
+  transform: translate3d(0px, -156px, 0px);
+  line-height: 150px;
+}
