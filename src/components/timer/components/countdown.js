@@ -20,8 +20,8 @@ const TimerDigits = ({ digits }) => {
   )
 }
 
-const CountdownTimer = ({ start, separator }) => {
-  const { hour, min, second } = useTimer(start)
+const CountdownTimer = ({ start, separator, isPaused }) => {
+  const { hour, min, second } = useTimer(start, isPaused)
   return (
     <div className='swan-timer-countdown-wrap'>
       <TimerDigits digits={hour} />
@@ -35,11 +35,13 @@ const CountdownTimer = ({ start, separator }) => {
 
 CountdownTimer.propTypes = {
   separator: PropTypes.string,
+  isPaused: PropTypes.bool,
   start: PropTypes.shape({ hour: PropTypes.number, min: PropTypes.number, second: PropTypes.number })
 }
 
 CountdownTimer.defaultProps = {
-  separator: ':'
+  separator: ':',
+  isPaused: false
 }
 
 export default CountdownTimer

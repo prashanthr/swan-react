@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react'
 
-export const useTimer = ({ hour, min, second }) => {
+export const useTimer = ({ hour, min, second }, isPaused = false) => {
   const [currentTime, setTime] = useState({ hour, min, second })
   const tick = (time) => {
+    if (isPaused) {
+      return time
+    }
     const updateSecond = ({ hour, min, second }) => {
       return second === 59 ? 0 : second + 1
     }
