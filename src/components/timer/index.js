@@ -13,7 +13,7 @@ const Timer = ({ type, start, isPaused }) => {
 Timer.propTypes = {
   type: PropTypes.oneOf(['countdown']),
   isPaused: PropTypes.bool,
-  start: PropTypes.shape({ hour: PropTypes.number, min: PropTypes.number, second: PropTypes.number })
+  start: PropTypes.shape({ hour: PropTypes.number, minute: PropTypes.number, second: PropTypes.number })
 }
 
 Timer.defaultProps = {
@@ -21,7 +21,7 @@ Timer.defaultProps = {
   isPaused: false,
   start: {
     hour: 0,
-    min: 0,
+    minute: 0,
     second: 0
   }
 }

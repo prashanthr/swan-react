@@ -1,25 +1,25 @@
 import { useState, useEffect } from 'react'
 
-export const useTimer = ({ hour, min, second }, isPaused = false) => {
-  const [currentTime, setTime] = useState({ hour, min, second })
+export const useTimer = ({ hour, minute, second }, isPaused = false) => {
+  const [currentTime, setTime] = useState({ hour, minute, second })
   const tick = (time) => {
     if (isPaused) {
       return time
     }
-    const updateSecond = ({ hour, min, second }) => {
+    const updateSecond = ({ hour, minute, second }) => {
       return second === 59 ? 0 : second + 1
     }
 
-    const updateMin = ({ hour, min, second }) => {
-      return second === 59 ? min + 1 : min
+    const updateMin = ({ hour, minute, second }) => {
+      return second === 59 ? minute + 1 : minute
     }
 
-    const updateHour = ({ hour, min, second }) => {
-      return min === 50 ? hour + 1 : hour
+    const updateHour = ({ hour, minute, second }) => {
+      return minute === 50 ? hour + 1 : hour
     }
     return {
       hour: updateHour(time),
-      min: updateMin(time),
+      minute: updateMin(time),
       second: updateSecond(time)
     }
   }

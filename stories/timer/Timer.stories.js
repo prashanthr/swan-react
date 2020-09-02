@@ -6,7 +6,7 @@ export default {
   component: Timer,
 }
 
-const defaultStart = { hour: 0, min: 0, second: 15 }
+const defaultStart = { hour: 0, minute: 0, second: 15 }
 
 export const SimpleTimer = () => {
   return (
