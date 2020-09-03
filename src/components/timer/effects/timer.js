@@ -1,21 +1,34 @@
 import { useState, useEffect } from 'react'
 
-export const useTimer = ({ hour, minute, second }, isPaused = false) => {
+export const useTimer = ({ start, countdown = false, isPaused = false }) => {
+  const { hour, minute, second } = start
   const [currentTime, setTime] = useState({ hour, minute, second })
   const tick = (time) => {
     if (isPaused) {
       return time
     }
     const updateSecond = ({ hour, minute, second }) => {
-      return second === 59 ? 0 : second + 1
+      if (countdown) {
+        return second === 0 ? 59 : second - 1
+      } else {
+        return second === 59 ? 0 : second + 1
+      }
     }
 
     const updateMin = ({ hour, minute, second }) => {
-      return second === 59 ? minute + 1 : minute
+      if (countdown) {
+        return minute !== 0 && second === 0 ? minute - 1 : minute
+      } else {
+        return second === 59 ? minute + 1 : minute
+      }
     }
 
     const updateHour = ({ hour, minute, second }) => {
-      return minute === 50 ? hour + 1 : hour
+      if (countdown)  {
+        return hour !== 0 && minute === 0 && second === 0 ? hour - 1: hour
+      } else {
+        return minute === 59 ? hour + 1 : hour
+      }
     }
     return {
       hour: updateHour(time),
