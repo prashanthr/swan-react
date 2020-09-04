@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { CountdownTimer, StopWatch } from './components'
+import { CountdownTimer, StopWatch, Progress } from './components'
 
 const Timer = ({ type, start, isPaused }) => {
   switch (type) {
+    case 'progress':
+      return <Progress start={start} isPaused={isPaused} />
     case 'stopwatch':
       return <StopWatch start={start} isPaused={isPaused} />
     case 'countdown':

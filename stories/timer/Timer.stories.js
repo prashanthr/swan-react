@@ -66,3 +66,22 @@ export const PausableCountdownTimer = () => {
     </div>
   )
 }
+
+
+export const CountdownProgressTimer = () => {
+  const [isPaused, pause] = useState(false)
+  return (
+    <div>
+      <Timer
+        type={'progress'}
+        isPaused={isPaused}
+        start={defaultCountdownStart}
+      />
+      <Button
+        withBorder
+        onClick={() => pause(isPaused => !isPaused)}
+        value={isPaused ? 'Unpause' : 'Pause'}
+      />
+    </div>
+  )
+}
