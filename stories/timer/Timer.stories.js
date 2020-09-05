@@ -15,6 +15,7 @@ export const SimpleStopwatchTimer = () => {
       <Timer
         type={'stopwatch'}
         start={defaultStopwatchStart}
+        large
       />
     </div>
   )
@@ -28,11 +29,13 @@ export const PausableStopwatchTimer = () => {
         type={'stopwatch'}
         isPaused={isPaused}
         start={defaultStopwatchStart}
+        large
       />
       <Button
         withBorder
         onClick={() => pause(isPaused => !isPaused)}
         value={isPaused ? 'Unpause' : 'Pause'}
+        large
       />
     </div>
   )
@@ -44,6 +47,7 @@ export const SimpleCountdownTimer = () => {
       <Timer
         type={'countdown'}
         start={defaultCountdownStart}
+        large
       />
     </div>
   )
@@ -57,6 +61,7 @@ export const PausableCountdownTimer = () => {
         type={'countdown'}
         isPaused={isPaused}
         start={defaultCountdownStart}
+        large
       />
       <Button
         withBorder
@@ -67,8 +72,19 @@ export const PausableCountdownTimer = () => {
   )
 }
 
+export const SimpleCountdownProgressTimer = () => {
+  return (
+    <div>
+      <Timer
+        type={'progress'}
+        start={defaultCountdownStart}
+      />
+    </div>
+  )
+}
 
-export const CountdownProgressTimer = () => {
+
+export const PausableCountdownProgressTimer = () => {
   const [isPaused, pause] = useState(false)
   return (
     <div>

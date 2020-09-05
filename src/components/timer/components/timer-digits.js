@@ -4,7 +4,7 @@ import './index.css'
 
 const TimerDigits = ({ digits }) => {
   const Digit = ({ digit }) => (
-    <span className='swan-timer-basic-digit'>
+    <span className={`swan-timer-basic-digit`}>
       {digit}
     </span>
   )

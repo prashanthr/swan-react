@@ -1,11 +1,18 @@
 .swan-timer-basic-wrap {
-  font-size: 205px;
   display: inline-flex;
+  font-size: 50px;
 }
 
 .swan-timer-basic-digit {
   transform: translate3d(0px, -156px, 0px);
-  line-height: 150px;
+}
+
+.swan-timer-basic-wrap-large {
+  font-size: 206px;
+}
+
+.swan-timer-basic-wrap-large > .swan-timer-basic-digit {
+  font-size: 206px;
 }
 
 /*
