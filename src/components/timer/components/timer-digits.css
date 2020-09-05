@@ -1,0 +1,7 @@
+.swan-timer-basic-digit {
+  transform: translate3d(0px, -156px, 0px);
+}
+
+.swan-timer-basic-wrap-large > .swan-timer-basic-digit {
+  font-size: 206px;
+}

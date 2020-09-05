@@ -4,6 +4,7 @@ import Emoji from './components/emoji'
 import Modal from './components/modal'
 import Recaptcha from './components/recaptcha'
 import SpotifyPlayerWidget from './components/spotify-player-widget'
+import Timer from './components/timer'
 
 export {
   Button,
@@ -11,5 +12,6 @@ export {
   Emoji,
   Modal,
   Recaptcha,
-  SpotifyPlayerWidget
+  SpotifyPlayerWidget,
+  Timer
 }
