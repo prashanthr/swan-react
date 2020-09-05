@@ -4,7 +4,10 @@ export const useTimer = ({ start, countdown = false, isPaused = false }) => {
   const { hour, minute, second } = start
   const [currentTime, setTime] = useState({ hour, minute, second })
   const tick = (time) => {
-    if (isPaused) {
+    const isZero = ({ hour, minute, second }) => (
+      hour === 0 && minute === 0 && second === 0
+    )
+    if (isPaused || (countdown && isZero(time))) {
       return time
     }
     const updateSecond = ({ hour, minute, second }) => {

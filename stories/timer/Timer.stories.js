@@ -6,8 +6,8 @@ export default {
   component: Timer,
 }
 
-const defaultStopwatchStart = { hour: 0, minute: 0, second: 15 }
-const defaultCountdownStart = { hour: 0, minute: 1, second: 30 }
+const defaultStopwatchStart = { hour: 0, minute: 0, second: 0 }
+const defaultCountdownStart = { hour: 0, minute: 0, second: 15 }
 
 export const SimpleStopwatchTimer = () => {
   return (
