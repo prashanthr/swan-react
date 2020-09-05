@@ -1,0 +1,10 @@
+.swan-progress-dark-example {
+  background: #282c34;
+  width: 400px;
+  height: 400px;
+}
+
+.swan-progress-dark-example-digit {
+  color: white;
+  font-size: 89px;
+}

@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './index.css'
+import './timer-digits.css'
 
-const TimerDigits = ({ digits }) => {
+const TimerDigits = ({ digits, className }) => {
   const Digit = ({ digit }) => (
-    <span className={`swan-timer-basic-digit`}>
+    <span className={`swan-timer-basic-digit ${className}`}>
       {digit}
     </span>
   )
@@ -18,6 +18,15 @@ const TimerDigits = ({ digits }) => {
       ))}
     </div>
   )
+}
+
+TimerDigits.propTypes = {
+  className: PropTypes.string,
+  digits: PropTypes.number
+}
+
+TimerDigits.defaultProps = {
+  className: '',
 }
 
 export default TimerDigits

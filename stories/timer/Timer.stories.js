@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Timer, Button } from '../../src'
+import './index.css'
 
 export default {
   title: 'Timer',
@@ -97,6 +98,19 @@ export const PausableCountdownProgressTimer = () => {
         withBorder
         onClick={() => pause(isPaused => !isPaused)}
         value={isPaused ? 'Unpause' : 'Pause'}
+      />
+    </div>
+  )
+}
+
+export const SimpleCountdownProgressTimerDarkCustom = () => {
+  return (
+    <div>
+      <Timer
+        type={'progress'}
+        start={defaultCountdownStart}
+        className={'swan-progress-dark-example'}
+        digitClassName={'swan-progress-dark-example-digit'}
       />
     </div>
   )

@@ -1,9 +1,9 @@
-import CountdownTimer from './countdown'
+import Countdown from './countdown'
 import StopWatch from './stopwatch'
 import Progress from './progress'
 
 export {
-  CountdownTimer,
+  Countdown,
   Progress,
   StopWatch,
 }
