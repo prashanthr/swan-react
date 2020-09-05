@@ -7,7 +7,7 @@ export default {
   component: Button,
 }
 
-export const ButtonWidget = () => {
+export const SimpleButton = () => {
   return (
     <div>
       <Button
@@ -19,7 +19,18 @@ export const ButtonWidget = () => {
   )
 }
 
-export const ButtonWidgetCustomContent = () => {
+export const SimpleButtonNoBorder = () => {
+  return (
+    <div>
+      <Button
+        onClick={() => alert('Button was clicked')}
+        value='This is a button'
+      />
+    </div>
+  )
+}
+
+export const CustomButton = () => {
   return (
     <div>
       <Button
@@ -29,8 +40,4 @@ export const ButtonWidgetCustomContent = () => {
       />
     </div>
   )
-}
-
-ButtonWidget.story = {
-  name: 'Button'
 }
