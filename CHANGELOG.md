@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.21](https://github.com/prashanthr/swan-react/compare/v0.0.20...v0.0.21) (2020-09-05)
+
+
+### Features
+
+* **ch127:** Add timer component with various states ([#10](https://github.com/prashanthr/swan-react/issues/10)) ([aff288c](https://github.com/prashanthr/swan-react/commit/aff288c754f15117ac97e9d9dc5b187edc541326))
+* **emoji:** Add Emoji component ([#11](https://github.com/prashanthr/swan-react/issues/11)) ([3dcdd19](https://github.com/prashanthr/swan-react/commit/3dcdd1962914107a4cf3489fd5de45bf1f03daec))
+
 ### [0.0.20](https://github.com/prashanthr/swan-react/compare/v0.0.19...v0.0.20) (2020-09-01)
 
 
