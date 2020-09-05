@@ -18,7 +18,7 @@ Card.propTypes = {
   className: PropTypes.string,
   contentClassName: PropTypes.string,
   isRounded: PropTypes.bool,
-  content: PropTypes.element
+  content: PropTypes.element.isRequired
 }
 
 Card.defaultProps = {

@@ -16,6 +16,8 @@ npm i @universal-apps/swan-react
 ## Components Supported
 
 - Button
+- Card
+- Emoji
 - Modal
 - ReCaptcha v2/v3
 - Spotify Player Widget
