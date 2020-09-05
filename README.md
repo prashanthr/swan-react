@@ -19,6 +19,7 @@ npm i @universal-apps/swan-react
 - Modal
 - ReCaptcha v2/v3
 - Spotify Player Widget
+- Timer (Stopwatch, Countdown and Circular Progress)
 
 ## Publishing changes to storybook
 
