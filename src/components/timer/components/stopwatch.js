@@ -15,7 +15,7 @@ const StopWatch = ({ start, separator, isPaused, large, className, digitClassNam
           <Fragment key={index}>
             <TimerDigits className={digitClassName} digits={digits} />
             {index !== Object.keys(start).length - 1 && (
-              <TimerDigitSepartor className={digitClassName} />
+              <TimerDigitSepartor separator={separator} className={digitClassName} />
             )}
           </Fragment>
       ))}

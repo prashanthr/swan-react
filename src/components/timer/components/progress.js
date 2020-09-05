@@ -32,7 +32,7 @@ const CircularProgressTimer = ({ start, current, separator, isPaused, strokeColo
           <Fragment key={index}>
             <TimerDigits className={digitClassName} digits={digits} />
             {index !== Object.keys(current).length - 1 && (
-              <TimerDigitSepartor className={digitClassName} />
+              <TimerDigitSepartor separator={separator} className={digitClassName} />
             )}
           </Fragment>
         ))}
