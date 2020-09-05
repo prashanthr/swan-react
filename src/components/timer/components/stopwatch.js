@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import TimerDigits from './timer-digits'
 import { useTimer } from '../effects/timer'
@@ -12,12 +12,12 @@ const StopWatch = ({ start, separator, isPaused, large, className, digitClassNam
       className={`swan-timer-basic-wrap ${large ? 'swan-timer-basic-wrap-large' : ''} ${className}`}
     >
       {[hour, minute, second].map((digits, index) => (
-          <>
+          <Fragment key={index}>
             <TimerDigits className={digitClassName} digits={digits} />
             {index !== Object.keys(start).length - 1 && (
               <TimerDigitSepartor className={digitClassName} />
             )}
-          </>
+          </Fragment>
       ))}
     </div>
   )

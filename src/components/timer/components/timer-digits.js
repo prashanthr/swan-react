@@ -13,8 +13,8 @@ const TimerDigits = ({ digits, className }) => {
     : digits.toString().split('')
   return (
     <div>
-      {digitEntries.map(digit => (
-        <Digit digit={digit} />
+      {digitEntries.map((digit, index) => (
+        <Digit key={index} digit={digit} />
       ))}
     </div>
   )

@@ -1,25 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { useTimer } from '../effects/timer'
 import TimerDigits from './timer-digits'
-import './timer-progress.css'
 import TimerDigitSepartor from './timer-digit-separator'
+import { getProgressCircleDashArray } from '../utils/progress'
+import './timer-progress.css'
 
-const CircularProgressTimer = ({ start, current, separator, isPaused, strokeColor, className, digitClassName }) => {
-  const calculateTimeFraction = (current, limit) => {
-    const getTotal = (time) => (time.second + (time.minute * 60) + (time.hour * 60 * 60))
-    console.log('current', 'limit', current, limit, getTotal(current), getTotal(limit))
-    return getTotal(current) / getTotal(limit)
-  }
-
-  // Update the dasharray value as time passes, starting with 283
-  const getCircleDashArray = (current, limit) => {
-    const FULL_DASH_ARRAY = 283
-    const circleDasharray = `${(
-      calculateTimeFraction(current, limit) * FULL_DASH_ARRAY
-    ).toFixed(0)} ${FULL_DASH_ARRAY}`
-    return circleDasharray
-  }
+const CircularProgressTimer = ({ start, current, separator, isPaused, strokeColor, className, digitClassName, svgPathStrokeDashArray = 283 }) => {
   const { hour, minute, second } = current
   return (
     <div className={`swan-timer-progress-circular ${className}`}>
@@ -28,7 +15,7 @@ const CircularProgressTimer = ({ start, current, separator, isPaused, strokeColo
           <circle className='swan-timer-progress-circular__path-elapsed' cx='50' cy='50' r='45'></circle>
           <path
             id='swan-timer-progress-circular-path-remaining'
-            stroke-dasharray={`${getCircleDashArray(current, start)}`}
+            strokeDasharray={svgPathStrokeDashArray}
             color={strokeColor}
             className={`swan-timer-progress-circular__path-remaining`}
             d='
@@ -42,12 +29,12 @@ const CircularProgressTimer = ({ start, current, separator, isPaused, strokeColo
       </svg>
       <span id='swan-timer-progress-circular-label' className='swan-timer-progress-circular__label'>
         {[hour, minute, second].map((digits, index) => (
-          <>
+          <Fragment key={index}>
             <TimerDigits className={digitClassName} digits={digits} />
             {index !== Object.keys(current).length - 1 && (
               <TimerDigitSepartor className={digitClassName} />
             )}
-          </>
+          </Fragment>
         ))}
       </span>
     </div>
@@ -56,6 +43,7 @@ const CircularProgressTimer = ({ start, current, separator, isPaused, strokeColo
 
 const ProgressTimer = ({ start, separator, isPaused, type, strokeColor, className, digitClassName }) => {
   const time = useTimer({ start, isPaused, countdown: true })
+  const svgPathStrokeDashArray = getProgressCircleDashArray(time, start)
   switch(type) {
     case 'circular':
     default:
@@ -63,6 +51,7 @@ const ProgressTimer = ({ start, separator, isPaused, type, strokeColor, classNam
         <CircularProgressTimer
           className={className}
           digitClassName={digitClassName}
+          svgPathStrokeDashArray={svgPathStrokeDashArray}
           separator={separator}
           start={start}
           current={time}
