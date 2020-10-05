@@ -23,7 +23,7 @@ const Audio = ({
     controls={showControls}
     src={src}
   >
-    {resolvedSources.map((source, idx) => (
+    {sources.map((source, idx) => (
       <source
         key={idx}
         src={source.src}
