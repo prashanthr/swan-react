@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Audio = ({
   onLoadedMetadata,
-  elRef,
+  ref,
   src,
   sources,
   tracks,
@@ -15,7 +15,7 @@ const Audio = ({
 }) => (
   <audio
     onLoadedMetadata={onLoadedMetadata}
-    ref={el => elRef && elRef(el)}
+    ref={ref}
     onPlay={onPlay}
     onTimeUpdate={onTimeUpdate}
     onVolumeChange={onVolumeChange}
@@ -43,7 +43,7 @@ const Audio = ({
 )
 
 Audio.propTypes = {
-  elRef: PropTypes.oneOfType([
+  ref: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.shape({ current: PropTypes.instanceOf(Element) })
   ]),
