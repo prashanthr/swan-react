@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.22](https://github.com/prashanthr/swan-react/compare/v0.0.21...v0.0.22) (2020-10-16)
+
+
+### Features
+
+* **audio:** Add basic html5 audio player [ch124] ([#12](https://github.com/prashanthr/swan-react/issues/12)) ([c40eb83](https://github.com/prashanthr/swan-react/commit/c40eb838ff4c2782766bfae5d2eec1492add1462))
+
 ### [0.0.21](https://github.com/prashanthr/swan-react/compare/v0.0.20...v0.0.21) (2020-09-05)
 
 
