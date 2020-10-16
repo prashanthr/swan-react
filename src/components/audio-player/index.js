@@ -1,6 +1,6 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types'
-import { Audio } from '../audio'
+import Audio from '../audio'
 import TrackInfo from './components/track-info'
 import Album from './components/album'
 import PlayerControls from './components/player-controls'
@@ -19,6 +19,7 @@ const AudioPlayer = ({
   trackName,
   artist,
   albumArtSrc,
+  album,
   pin,
   pinDirection
 }) => {
@@ -32,10 +33,10 @@ const AudioPlayer = ({
   })
   const { audioRef, isPlaying, isMuted, volume, duration, currentTime } = playerState
   return (
-    <div className='swan-audio-player'>
+    <div className={`swan-audio-player ${className}`}>
       <div className='swan-audio-player-components'>
         <Album albumArt={albumArtSrc} />
-        <TrackInfo track={trackSrc} artist={artist} />
+        <TrackInfo track={trackName} artist={artist} album={album} />
         <PlayerControls
           isPlaying={isPlaying}
           onPlayPause={() => onPlayPause({ playerState, setPlayerState })}
@@ -54,6 +55,7 @@ const AudioPlayer = ({
         className='swan-audio-element'
         onLoadedMetadata={(event) => onLoadedMetadata({ event, playerState, setPlayerState })}
         onTimeUpdate={() => onTimeUpdate({ playerState, setPlayerState })}
+        showControls={false}
       />
     </div>
   )
