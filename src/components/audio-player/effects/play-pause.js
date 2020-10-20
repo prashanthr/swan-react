@@ -1,17 +1,21 @@
-export const onPlayPause = ({ playerState, setPlayerState }) => {
+export const onPlayPause = ({ srcFile, playerState, setPlayerState }) => {
+  console.log('playerstate', playerState)
+  // let audioRef = Object.assign({}, playerState.audioRef)
   const { audioRef } = playerState
+  console.log('audioRef', audioRef)
+  let currentRef = audioRef.current
   let currentTime =  audioRef.currentTime
   if (playerState.isPlaying) {
-    audioRef.pause()
+    currentRef.pause()
   } else {
-    if (!audioRef.src) {
-      audioRef.src = srcFile
+    if (!currentRef.src) {
+      currentRef.src = srcFile
     }
-    audioRef.play()
+    currentRef.play()
   }
   setPlayerState({
     ...playerState,
     isPlaying: !playerState.isPlaying,
-    currentTime: currentTime
+    currentTime: currentTime,
   })
 }

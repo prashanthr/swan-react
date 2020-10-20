@@ -1,6 +1,7 @@
 export const onTimeUpdate = ({ playerState, setPlayerState }) => {
+  const { audioRef } = playerState
   setPlayerState({
     ...playerState,
-    currentTime: audioRef.currentTime
+    currentTime: audioRef.current.currentTime,
   })
 }

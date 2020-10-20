@@ -4,7 +4,7 @@ export const onVolumeChange = ({ event, element, playerState, setPlayerState }) 
   const { audioRef } = playerState
   const percentChange = getSeekPercentChange({ event, element })
   // Set audio volume level
-  audioRef.volume = percentChange
+  audioRef.current.volume = percentChange
   // Update UI component
   setPlayerState({
     ...playerState,

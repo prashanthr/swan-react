@@ -9,10 +9,11 @@ export const onProgressSeek = ({ event, element, playerState, setPlayerState }) 
     percent: percentChange
   })
   // Set audio current time
-  audioRef.currentTime = newTime
+  // audioRef.currentTime = newTime
+  audioRef.current.currentTime = newTime
   // Update UI component
   setPlayerState({
     ...playerState,
-    currentTime: newTime
+    currentTime: newTime,
   })
 }

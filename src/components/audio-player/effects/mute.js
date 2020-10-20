@@ -1,13 +1,15 @@
 export const onToggleMute = ({ playerState, setPlayerState }) => {
+  // let audioRef = Object.assign({}, playerState.audioRef)
   const { audioRef } = playerState
+  let currentRef = audioRef.current
   const newValue = !playerState.isMuted
   if (newValue) { // muted
-    audioRef.volume = 0
+    currentRef.volume = 0
   } else {
-    audioRef.volume = playerState.volume
+    currentRef.volume = playerState.volume
   }
   setPlayerState({
     ...playerState,
-    isMuted: newValue
+    isMuted: newValue,
   })
 }

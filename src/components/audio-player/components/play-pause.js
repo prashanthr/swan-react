@@ -5,7 +5,8 @@ import './index.css'
 
 const PlayPause = ({ onPlayPause, isPlaying = false }) => (
   <Button
-    className={`${isPlaying ? 'swan-audio-player-pause-btn' : 'swan-audio-player-play-btn'}`}
+    withBorder
+    className={`swan-audio-player-play-pause-btn ${isPlaying ? 'swan-audio-player-play-pause-btn-play' : 'swan-audio-player-play-pause-btn-pause'}`}
     onClick={onPlayPause}
   />
 )

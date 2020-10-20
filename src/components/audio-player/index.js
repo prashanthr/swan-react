@@ -24,7 +24,7 @@ const AudioPlayer = ({
   pinDirection
 }) => {
   const [playerState, setPlayerState] = useState({
-    audioRef: useRef(null),
+    audioRef: React.createRef(),
     isPlaying: false,
     currentTime: 0,
     duration: null,
@@ -39,7 +39,7 @@ const AudioPlayer = ({
         <TrackInfo track={trackName} artist={artist} album={album} />
         <PlayerControls
           isPlaying={isPlaying}
-          onPlayPause={() => onPlayPause({ playerState, setPlayerState })}
+          onPlayPause={() => onPlayPause({ srcFile: trackSrc, playerState, setPlayerState })}
           duration={duration}
           currentTime={currentTime}
           onProgressSeek={(event, element) => onProgressSeek({ event, element, playerState, setPlayerState })}
@@ -50,7 +50,7 @@ const AudioPlayer = ({
         />
       </div>
       <Audio
-        ref={audioRef}
+        elRef={audioRef}
         src={trackSrc}
         className='swan-audio-element'
         onLoadedMetadata={(event) => onLoadedMetadata({ event, playerState, setPlayerState })}
