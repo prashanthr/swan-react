@@ -12,9 +12,11 @@ const PlayerControls = ({ onPlayPause, isPlaying = false, currentTime, duration,
     <PlayPause onPlayPause={onPlayPause} isPlaying={isPlaying} />
     <div className='swan-audio-player-player-controls-progress-grid'>
       <ProgressBar className='swan-audio-player-controls-progress' onProgressSeek={onProgressSeek} currentTime={currentTime} duration={duration} />
-      <Duration className='swan-audio-player-controls-duration' current={currentTime} total={duration} />
+      <div className='swan-audio-player-controls-volume-duration-grid'>
+        <VolumeControl isMuted={isMuted} level={volumeLevel} onToggleMute={onToggleMute} onVolumeChange={onVolumeChange} />
+        <Duration className='swan-audio-player-controls-duration' current={currentTime} total={duration} />
+      </div>
     </div>
-    <VolumeControl isMuted={isMuted} level={volumeLevel} onToggleMute={onToggleMute} onVolumeChange={onVolumeChange} />
   </div>
 )
 

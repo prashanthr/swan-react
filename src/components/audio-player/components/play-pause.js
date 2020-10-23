@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Button from '../../button'
+import playSvg from '../assets/play.svg'
+import pauseSvg from '../assets/pause.svg'
 import './index.css'
 
 const PlayPause = ({ onPlayPause, isPlaying = false }) => (
   <Button
-    withBorder
-    className={`swan-audio-player-play-pause-btn ${isPlaying ? 'swan-audio-player-play-pause-btn-play' : 'swan-audio-player-play-pause-btn-pause'}`}
+    className='swan-audio-player-button'
+    value={<img src={isPlaying ? pauseSvg : playSvg} />}
     onClick={onPlayPause}
   />
 )
