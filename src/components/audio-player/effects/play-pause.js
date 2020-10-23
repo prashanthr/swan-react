@@ -1,6 +1,5 @@
 export const onPlayPause = ({ srcFile, playerState, setPlayerState }) => {
   console.log('playerstate', playerState)
-  // let audioRef = Object.assign({}, playerState.audioRef)
   const { audioRef } = playerState
   console.log('audioRef', audioRef)
   let currentRef = audioRef.current

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { getUserFriendlyTime } from '../utils/time'
 import './index.css'
 
-const Duration = ({ current, total }) => (
-  <div className='swan-audio-player-duration'>
+const Duration = ({ className = '', current, total }) => (
+  <div className={className}>
     {getUserFriendlyTime(current)} / {getUserFriendlyTime(total)}
   </div>
 )

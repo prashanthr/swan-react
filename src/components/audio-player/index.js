@@ -33,8 +33,7 @@ const AudioPlayer = ({
   })
   const { audioRef, isPlaying, isMuted, volume, duration, currentTime } = playerState
   return (
-    <div className={`swan-audio-player ${className}`}>
-      <div className='swan-audio-player-components'>
+    <div className={`swan-audio-player-grid ${className}`}>
         <Album albumArt={albumArtSrc} />
         <TrackInfo track={trackName} artist={artist} album={album} />
         <PlayerControls
@@ -48,15 +47,14 @@ const AudioPlayer = ({
           onToggleMute={() => onToggleMute({ playerState, setPlayerState })}
           onVolumeChange={(event, element) => onVolumeChange({ event, element, playerState, setPlayerState })}
         />
-      </div>
-      <Audio
-        elRef={audioRef}
-        src={trackSrc}
-        className='swan-audio-element'
-        onLoadedMetadata={(event) => onLoadedMetadata({ event, playerState, setPlayerState })}
-        onTimeUpdate={() => onTimeUpdate({ playerState, setPlayerState })}
-        showControls={false}
-      />
+        <Audio
+          elRef={audioRef}
+          src={trackSrc}
+          className='swan-audio-element'
+          onLoadedMetadata={(event) => onLoadedMetadata({ event, playerState, setPlayerState })}
+          onTimeUpdate={() => onTimeUpdate({ playerState, setPlayerState })}
+          showControls={false}
+        />
     </div>
   )
 }
