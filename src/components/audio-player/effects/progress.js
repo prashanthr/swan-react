@@ -1,4 +1,4 @@
-import { getSeekPercentChange } from '../utils/seek'
+import { getSeekPercentChange, getUpdatedSeekTime } from '../utils/seek'
 
 export const onProgressSeek = ({ event, element, playerState, setPlayerState }) => {
   const { audioRef } = playerState
@@ -9,7 +9,6 @@ export const onProgressSeek = ({ event, element, playerState, setPlayerState }) 
     percent: percentChange
   })
   // Set audio current time
-  // audioRef.currentTime = newTime
   audioRef.current.currentTime = newTime
   // Update UI component
   setPlayerState({
