@@ -4,8 +4,6 @@ import PlayPause from './play-pause'
 import VolumeControl from './volume-control'
 import ProgressBar from './progress'
 import Duration from './duration'
-import './index.css'
-
 
 const PlayerControls = ({ onPlayPause, isPlaying = false, currentTime, duration, onProgressSeek, isMuted, volumeLevel, onToggleMute, onVolumeChange }) => (
   <div className='swan-audio-player-player-controls-grid'>

@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Button from '../../button'
-import './index.css'
 import volumeFullSvg from '../assets/volume-full.svg'
 import volumeOffSvg from '../assets/volume-off.svg'
 

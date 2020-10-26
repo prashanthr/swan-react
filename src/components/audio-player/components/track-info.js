@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './index.css'
 
 const TrackInfo = ({ track, artist, album }) => (
   <div className='swan-audio-player-track-info-grid'>

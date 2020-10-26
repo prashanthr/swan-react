@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Button from '../../button'
 import playSvg from '../assets/play.svg'
 import pauseSvg from '../assets/pause.svg'
-import './index.css'
 
 const PlayPause = ({ onPlayPause, isPlaying = false }) => (
   <Button
