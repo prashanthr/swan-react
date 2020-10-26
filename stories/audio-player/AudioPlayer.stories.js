@@ -3,7 +3,7 @@ import { AudioPlayer } from '../../src'
 
 const exampleAudioSrc = 'https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3'
 const exampleSrc = 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio'
-const albumArtSrc = 'https://i.scdn.co/image/ab67616d0000b27338802659d156935ada63c9e3'
+const albumArtSrc = 'https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80'
 export default {
   title: 'AudioPlayer',
   component: AudioPlayer,

@@ -1,10 +1,13 @@
 
 .swan-audio-player-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr); */
+  grid-template-columns: 0.5fr 1fr;
   grid-column-gap: 0.5ch;
   grid-row-gap: 0.5ch;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .swan-audio-player-album-grid {
@@ -27,6 +30,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 0ch;
+  margin-left: 12%;
 }
 
 .swan-audio-player-track-info {
@@ -42,10 +46,15 @@
 
 
 .swan-audio-player-player-controls-grid {
-  grid-area: 2 / 2 / 3 / 4;
+  /* grid-area: 2 / 2 / 3 / 4;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -76,39 +85,57 @@ border-width: 0px 0 0px 60px;
 }
 
 .swan-audio-player-player-controls-progress-grid {
-  grid-area: 1 / 2 / 2 / 3;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.60fr 0.40fr;
+  grid-template-columns: 0.4fr 1fr;
+  grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
 
 .swan-audio-player-controls-progress {
   width: 100%;
+  height: 75%;
 }
 
 .swan-audio-player-controls-duration {
-  /* margin-left: auto; */
+  margin-left: auto;
 }
 
-.swan-audio-player-player-controls-volume-grid {
-  grid-area: 1 / 3 / 2 / 4;
+.swan-audio-player-player-controls-volume-duration-grid {
   display: grid;
-  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.swan-audio-player-player-controls-play-pause-progress-grid {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+
+
+.swan-audio-player-player-controls-volume-grid {
+  display: grid;
+  grid-template-columns: 0.6fr 0.4fr;
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
 
 .swan-audio-player-player-controls-volume-progress {
-  margin-top: 20%;
+  margin-top: 5%;
   width: 100%;
+  height: 50%;
 }
 
 .swan-audio-player-controls-volume-duration-grid {
   display: grid;
-  grid-template-columns: 2fr repeat(2, 1fr);
+  grid-template-columns: 2fr repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
