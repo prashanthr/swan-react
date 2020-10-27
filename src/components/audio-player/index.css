@@ -1,8 +1,6 @@
 
 .swan-audio-player-grid {
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr); */
   grid-template-columns: 0.5fr 1fr;
   grid-column-gap: 0.5ch;
   grid-row-gap: 0.5ch;
@@ -33,10 +31,6 @@
   margin-left: 12%;
 }
 
-.swan-audio-player-track-info {
-
-}
-
 .swan-audio-player-button {
   appearance: none;
   background: none;
@@ -46,48 +40,9 @@
 
 
 .swan-audio-player-player-controls-grid {
-  /* grid-area: 2 / 2 / 3 / 4;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px; */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-
-.swan-audio-player-play-pause-btn {
-  border: 0;
-  background: transparent;
-  box-sizing: border-box;
-  width: 0;
-  height: 74px;
-  border-color: transparent transparent transparent #202020;
-  transition: 100ms all ease;
-  cursor: pointer;
-}
-
-.swan-audio-player-play-pause-btn:hover {
-border-color: transparent transparent transparent #404040;
-}
-
-.swan-audio-player-play-pause-btn-pause {
-border-style: solid;
-border-width: 37px 0 37px 60px;
-}
-
-.swan-audio-player-play-pause-btn-play {
-border-style: double;
-border-width: 0px 0 0px 60px;
-}
-
-.swan-audio-player-player-controls-progress-grid {
-  display: grid;
-  grid-template-columns: 0.4fr 1fr;
-  grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -118,8 +73,6 @@ border-width: 0px 0 0px 60px;
   grid-row-gap: 0px;
 }
 
-
-
 .swan-audio-player-player-controls-volume-grid {
   display: grid;
   grid-template-columns: 0.6fr 0.4fr;
@@ -133,64 +86,3 @@ border-width: 0px 0 0px 60px;
   width: 100%;
   height: 50%;
 }
-
-.swan-audio-player-controls-volume-duration-grid {
-  display: grid;
-  grid-template-columns: 2fr repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-
-.swan-audio-player-album {
-
-}
-
-.swan-audio-player-duration {
-
-}
-
-.swan-audio-player-pause-btn {
-
-}
-
-.swan-audio-player-controls {
-
-}
-
-.swan-audio-player-progress-wrap {
-
-}
-
-
-
-
-.swan-audio-player-volume {
-
-}
-
-.swan-audio-player-volume-progress {
-
-}
-
-.swan-audio-player-control-progress {
-
-}
-
-.swan-audio-player-track-info {
-
-}
-
-.swan-audio-player-track-info-artist {
-
-}
-
-.swan-audio-player-track-info-track {
-
-}
-
-
-.swan-audio-element {
-
-}
-
