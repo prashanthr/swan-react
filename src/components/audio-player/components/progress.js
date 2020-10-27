@@ -1,8 +1,8 @@
-import React, { createElement } from 'react'
+import React, { createElement, createRef } from 'react'
 import PropTypes from 'prop-types'
 
 const ProgressBar = ({ value, currentTime, duration, onProgressSeek, className, customComponent }) => {
-  let progressRef = null // React.createRef
+  let progressRef = createRef()
   return (
     (
       customComponent && createElement(<customComponent />, {
@@ -15,7 +15,7 @@ const ProgressBar = ({ value, currentTime, duration, onProgressSeek, className, 
           role={'none'}
           onKeyPress={() => {}}
           id='swan-audio-player-progress'
-          ref={el => { progressRef = el }}
+          ref={progressRef}
           onClick={e => onProgressSeek(e, progressRef)}
           className={`swan-audio-player-progress ${className}`}
           value={currentTime}

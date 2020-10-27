@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState, createRef } from 'react'
 import PropTypes from 'prop-types'
 import Audio from '../audio'
 import TrackInfo from './components/track-info'
@@ -32,7 +32,7 @@ const AudioPlayer = ({
   durationCustomComponent
 }) => {
   const [playerState, setPlayerState] = useState({
-    audioRef: React.createRef(),
+    audioRef: createRef(),
     isPlaying: false,
     currentTime: 0,
     duration: null,

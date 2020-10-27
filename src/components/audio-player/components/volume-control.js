@@ -1,4 +1,4 @@
-import React, { cloneElement } from 'react'
+import React, { cloneElement, createRef } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../../button'
 import volumeFullSvg from '../assets/volume-full.svg'
@@ -15,7 +15,7 @@ const VolumeControl = (props) => {
     onVolumeChange
   } = props
 
-  let volumeProgressRef = null // React.createRef()
+  let volumeProgressRef = createRef()
 
   return (
     (
