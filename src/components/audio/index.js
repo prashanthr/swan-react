@@ -15,7 +15,7 @@ const Audio = ({
 }) => (
   <audio
     onLoadedMetadata={onLoadedMetadata}
-    ref={el => elRef && elRef(el)}
+    ref={elRef}
     onPlay={onPlay}
     onTimeUpdate={onTimeUpdate}
     onVolumeChange={onVolumeChange}

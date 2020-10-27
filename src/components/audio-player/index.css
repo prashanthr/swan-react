@@ -1,0 +1,88 @@
+
+.swan-audio-player-grid {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-column-gap: 0.5ch;
+  grid-row-gap: 0.5ch;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.swan-audio-player-album-grid {
+  grid-area: 1 / 1 / 3 / 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.swan-audio-player-album {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.swan-audio-player-track-info-grid {
+  grid-area: 1 / 2 / 2 / 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 0ch;
+  margin-left: 12%;
+}
+
+.swan-audio-player-button {
+  appearance: none;
+  background: none;
+  width: auto;
+  height: auto;
+}
+
+
+.swan-audio-player-player-controls-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.swan-audio-player-controls-progress {
+  width: 100%;
+  height: 75%;
+}
+
+.swan-audio-player-controls-duration {
+  margin-left: auto;
+  margin-top: 3%;
+}
+
+.swan-audio-player-player-controls-volume-duration-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.swan-audio-player-player-controls-play-pause-progress-grid {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.swan-audio-player-player-controls-volume-grid {
+  display: grid;
+  grid-template-columns: 0.6fr 0.4fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.swan-audio-player-player-controls-volume-progress {
+  margin-top: 5%;
+  width: 100%;
+  height: 50%;
+}
