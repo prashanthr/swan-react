@@ -3,7 +3,7 @@
 Re-usable React Components
 
 ## Demo
-View the components live at https://prashanthr.github.io/swan-react/
+View all the components live at https://prashanthr.github.io/swan-react/
 
 ## Installation
 
@@ -15,6 +15,8 @@ npm i @universal-apps/swan-react
 
 ## Components Supported
 
+- Audio
+- AudioPlayer
 - Button
 - Card
 - Emoji
