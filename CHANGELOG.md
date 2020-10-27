@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.24](https://github.com/prashanthr/swan-react/compare/v0.0.23...v0.0.24) (2020-10-27)
+
+
+### Bug Fixes
+
+* **webpack-svg:** Fix svg build ([#16](https://github.com/prashanthr/swan-react/issues/16)) ([0bf477b](https://github.com/prashanthr/swan-react/commit/0bf477b10e7ca2cb055513401c7115d300ce969a))
+
 ### [0.0.23](https://github.com/prashanthr/swan-react/compare/v0.0.22...v0.0.23) (2020-10-27)
 
 
