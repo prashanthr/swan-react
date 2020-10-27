@@ -1,5 +1,6 @@
 import React from 'react'
 import { AudioPlayer } from '../../src'
+import './index.css'
 
 const exampleAudioSrc = 'https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3'
 const exampleSrc = 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio'
@@ -31,6 +32,25 @@ export const SimpleAudioPlayer = () => {
         album={'The Roar Collection'}
       />
       <Sources />
+    </div>
+  )
+}
+
+
+export const CustomAudioPlayer = () => {
+  return (
+    <div>
+      <br />
+      <AudioPlayer
+        className={'custom-audio-player'}
+        trackSrc={exampleAudioSrc}
+        trackName={'Rex Roar'}
+        albumArtSrc={albumArtImgSrc}
+        artist={'T Rex'}
+        album={'The Roar Collection'}
+      />
+      <Sources />
+      <h3>Note: A lot more customization is available. Check out the docs/props to see what you can do</h3>
     </div>
   )
 }

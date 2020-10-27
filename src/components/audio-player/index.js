@@ -20,8 +20,16 @@ const AudioPlayer = ({
   artist,
   albumArtSrc,
   album,
-  pin,
-  pinDirection
+  albumClassName,
+  albumArtClassName,
+  trackInfoClassName,
+  progressClassName,
+  playerControlsClassName,
+  volumeProgressClassName,
+  playPauseCustomComponent,
+  progressCustomComponent,
+  volumeCustomComponent,
+  durationCustomComponent
 }) => {
   const [playerState, setPlayerState] = useState({
     audioRef: React.createRef(),
@@ -34,8 +42,17 @@ const AudioPlayer = ({
   const { audioRef, isPlaying, isMuted, volume, duration, currentTime } = playerState
   return (
     <div className={`swan-audio-player-grid ${className}`}>
-        <Album albumArt={albumArtSrc} />
-        <TrackInfo track={trackName} artist={artist} album={album} />
+        <Album
+          albumArt={albumArtSrc}
+          className={albumClassName}
+          imgClassName={albumArtClassName}
+        />
+        <TrackInfo
+          track={trackName}
+          artist={artist}
+          album={album}
+          className={trackInfoClassName}
+        />
         <PlayerControls
           isPlaying={isPlaying}
           onPlayPause={() => onPlayPause({ srcFile: trackSrc, playerState, setPlayerState })}
@@ -46,6 +63,13 @@ const AudioPlayer = ({
           volumeLevel={volume}
           onToggleMute={() => onToggleMute({ playerState, setPlayerState })}
           onVolumeChange={(event, element) => onVolumeChange({ event, element, playerState, setPlayerState })}
+          playerControlsClassName={playerControlsClassName}
+          progressClassName={progressClassName}
+          volumeProgressClassName={volumeProgressClassName}
+          playPauseCustomComponent={playPauseCustomComponent}
+          progressCustomComponent={progressCustomComponent}
+          volumeCustomComponent={volumeCustomComponent}
+          durationCustomComponent={durationCustomComponent}
         />
         <Audio
           elRef={audioRef}
@@ -66,12 +90,29 @@ AudioPlayer.propTypes = {
   trackName: PropTypes.string,
   artist: PropTypes.string,
   albumArtSrc: PropTypes.string,
-  pin: PropTypes.bool,
+  albumClassName: PropTypes.string,
+  albumArtClassName: PropTypes.string,
+  trackInfoClassName: PropTypes.string,
+  progressClassName: PropTypes.string,
+  playerControlsClassName: PropTypes.string,
+  volumeProgressClassName: PropTypes.string,
+  playPauseCustomComponent: PropTypes.element,
+  progressCustomComponent: PropTypes.element,
+  volumeCustomComponent: PropTypes.element,
+  durationCustomComponent: PropTypes.element
+  // pin: PropTypes.bool, // Not implemented yet
+  // pinDirection // Not implemented yet
 }
 
 AudioPlayer.defaultProps = {
   trackType: 'mp3',
-  className: ''
+  className: '',
+  albumClassName: '',
+  albumArtClassName: '',
+  trackInfoClassName: '',
+  playerControlsClassName: '',
+  progressClassName: '',
+  volumeProgressClassName: ''
 }
 
 export default AudioPlayer
