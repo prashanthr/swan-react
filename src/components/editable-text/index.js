@@ -42,8 +42,12 @@ const EditableText = ({ text, onChange, wrapperClassName, textClassName, inputCl
   return (
     <div className={`swan-react-editable-text ${wrapperClassName}`} onClick={onTextInputStart}>
       {(!state.inEdit
-        ? <Text text={state.text} />
+        ? <Text
+            text={state.text}
+            className={textClassName}
+          />
         : <TextEdit
+            inputClassName={inputClassName}
             onChange={onTextInputChange}
             initialText={state.text}
             text={state.input.text}
@@ -55,11 +59,15 @@ const EditableText = ({ text, onChange, wrapperClassName, textClassName, inputCl
 }
 
 EditableText.propTypes = {
-
+  wrapperClassName: PropTypes.string,
+  inputClassName: PropTypes.string,
+  inputClassName: PropTypes.string
 }
 
 EditableText.defaultProps = {
-
+  wrapperClassName: '',
+  inputClassName: '',
+  inputClassName: ''
 }
 
 

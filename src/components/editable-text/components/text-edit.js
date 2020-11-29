@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 const EditText = ({
   initialText,
   text,
-  wrapperClassName,
   inputClassName,
   placeholder,
   onChange,
@@ -25,20 +24,17 @@ const EditText = ({
   }
 
   return (
-    <div className={wrapperClassName}>
-      <input
-        className={inputClassName}
-        value={text}
-        placeholder={placeholder}
-        onChange={event => onChange({ event })}
-        onKeyUp={event => onKeyUp({ event })}
-      />
-    </div>
+    <input
+      className={inputClassName}
+      value={text}
+      placeholder={placeholder}
+      onChange={event => onChange({ event })}
+      onKeyUp={event => onKeyUp({ event })}
+    />
   )
 }
 
 EditText.propTypes = {
-  wrapperClassName: PropTypes.string,
   inputClassName: PropTypes.string,
   placeholder: PropTypes.string,
   initialText: PropTypes.string,
@@ -47,7 +43,6 @@ EditText.propTypes = {
 
 EditText.defaultProps = {
   placeholder: '',
-  wrapperClassName: '',
   inputClassName: '',
 }
 
