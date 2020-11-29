@@ -12,7 +12,6 @@ const EditableText = ({ text, onChange, wrapperClassName, textClassName, inputCl
     }
   })
   const onTextInputChange = ({ event }) => {
-    console.log('onTextInputChange', event)
     updateState({
       ...state,
       input: {
@@ -22,7 +21,6 @@ const EditableText = ({ text, onChange, wrapperClassName, textClassName, inputCl
     })
   }
   const onTextInputEnd = ({ text }) => {
-    console.log('onTextInputEnd', state, text)
     updateState({
       ...state,
       text,

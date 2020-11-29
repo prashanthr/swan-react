@@ -10,11 +10,12 @@ const EditText = ({
   onEnd
 }) => {
   const onKeyUp = ({ event }) => {
-    console.log('onKeyUp', event, event.keyCode)
     switch(event.keyCode) {
+      // Enter or Return
       case 13:
         onEnd({ text: event.target.value })
         return
+      // Esc
       case 27:
         onEnd({ text: initialText })
         return
