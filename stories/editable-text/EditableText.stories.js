@@ -16,7 +16,7 @@ const HelpText = () => (
 export const SimpleEditableText = () => (
   <>
     <EditableText
-      text={'hello'}
+      text={'Hello'}
     />
     <HelpText />
   </>
@@ -25,7 +25,7 @@ export const SimpleEditableText = () => (
 export const CustomEditableText = () => (
   <>
     <EditableText
-      text={'hello'}
+      text={'Hello'}
       wrapperClassName='custom-editable-text-wrap'
       inputClassName='custom-editable-text-input'
       textClassName='custom-editable-text-text'
