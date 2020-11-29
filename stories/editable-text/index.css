@@ -1,0 +1,23 @@
+.editable-text-help-msg {
+  padding-top: 5px;
+  font-style: italic;
+  font-size: smaller;
+}
+
+.custom-editable-text-wrap {
+  font-size: 20px;
+}
+
+.custom-editable-text-wrap:hover {
+  font-style: italic;
+}
+
+.custom-editable-text-input {
+  font-size: 20px;
+  background: black;
+  color: white;
+}
+
+.custom-editable-text-text {
+  color: blue;
+}
