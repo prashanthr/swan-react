@@ -7,17 +7,29 @@ export default {
   component: EditableText,
 }
 
+const HelpText = () => (
+  <div className='editable-text-help-msg'>
+    Hint: Click the above text to edit. While in edit mode, press enter to save and escape to cancel.
+  </div>
+)
+
 export const SimpleEditableText = () => (
-  <EditableText
-    text={'hello'}
-  />
+  <>
+    <EditableText
+      text={'hello'}
+    />
+    <HelpText />
+  </>
 )
 
 export const CustomEditableText = () => (
-  <EditableText
-    text={'hello'}
-    wrapperClassName='custom-editable-text-wrap'
-    inputClassName='custom-editable-text-input'
-    textClassName='custom-editable-text-text'
-  />
+  <>
+    <EditableText
+      text={'hello'}
+      wrapperClassName='custom-editable-text-wrap'
+      inputClassName='custom-editable-text-input'
+      textClassName='custom-editable-text-text'
+    />
+    <HelpText />
+  </>
 )
