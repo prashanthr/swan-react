@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.25](https://github.com/prashanthr/swan-react/compare/v0.0.24...v0.0.25) (2020-11-29)
+
+
+### Features
+
+* **editable-text:** Add editable text component [ch156] ([#17](https://github.com/prashanthr/swan-react/issues/17)) ([95b4bf4](https://github.com/prashanthr/swan-react/commit/95b4bf4458a7fbcaf094b57de5940fb0674638e6))
+
 ### [0.0.24](https://github.com/prashanthr/swan-react/compare/v0.0.23...v0.0.24) (2020-10-27)
 
 
