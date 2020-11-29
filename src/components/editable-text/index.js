@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Text from './components/text'
 import TextEdit from './components/text-edit'
 
-const EditableText = ({ text, wrapperClassName, textClassName, inputClassName }) => {
+const EditableText = ({ text, onUpdate, wrapperClassName, textClassName, inputClassName }) => {
   const [state, updateState] = useState({
     text,
     inEdit: false,
@@ -21,6 +21,7 @@ const EditableText = ({ text, wrapperClassName, textClassName, inputClassName })
     })
   }
   const onTextInputEnd = ({ text }) => {
+    const previous = state.text
     updateState({
       ...state,
       text,
@@ -29,6 +30,13 @@ const EditableText = ({ text, wrapperClassName, textClassName, inputClassName })
       },
       inEdit: false
     })
+    // Callback
+    if (onUpdate) {
+      onUpdate({
+        current: text,
+        previous
+      })
+    }
   }
   const onTextInputStart = () => {
     updateState({
@@ -60,7 +68,8 @@ EditableText.propTypes = {
   text: PropTypes.string,
   wrapperClassName: PropTypes.string,
   inputClassName: PropTypes.string,
-  inputClassName: PropTypes.string
+  inputClassName: PropTypes.string,
+  onUpdate: PropTypes.func
 }
 
 EditableText.defaultProps = {

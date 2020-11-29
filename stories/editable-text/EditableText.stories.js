@@ -1,5 +1,6 @@
 import React from 'react'
 import { EditableText } from '../../src'
+import { action } from '@storybook/addon-actions'
 import './index.css'
 
 export default {
@@ -29,6 +30,17 @@ export const CustomEditableText = () => (
       wrapperClassName='custom-editable-text-wrap'
       inputClassName='custom-editable-text-input'
       textClassName='custom-editable-text-text'
+    />
+    <HelpText />
+  </>
+)
+
+
+export const SimpleEditableTextWithCallback = () => (
+  <>
+    <EditableText
+      text={'Hello'}
+      onUpdate={action('onUpdate')}
     />
     <HelpText />
   </>
