@@ -19,6 +19,7 @@ npm i @universal-apps/swan-react
 - AudioPlayer
 - Button
 - Card
+- EditableText
 - Emoji
 - Modal
 - ReCaptcha v2/v3
