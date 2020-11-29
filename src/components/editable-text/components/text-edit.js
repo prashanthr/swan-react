@@ -39,7 +39,9 @@ EditText.propTypes = {
   inputClassName: PropTypes.string,
   placeholder: PropTypes.string,
   initialText: PropTypes.string,
-  onChange: PropTypes.func
+  text: PropTypes.string,
+  onChange: PropTypes.func,
+  onEnd: PropTypes.func
 }
 
 EditText.defaultProps = {

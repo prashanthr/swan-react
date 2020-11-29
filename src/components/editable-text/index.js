@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Text from './components/text'
 import TextEdit from './components/text-edit'
 
-const EditableText = ({ text, onChange, wrapperClassName, textClassName, inputClassName }) => {
+const EditableText = ({ text, wrapperClassName, textClassName, inputClassName }) => {
   const [state, updateState] = useState({
     text,
     inEdit: false,
@@ -57,6 +57,7 @@ const EditableText = ({ text, onChange, wrapperClassName, textClassName, inputCl
 }
 
 EditableText.propTypes = {
+  text: PropTypes.string,
   wrapperClassName: PropTypes.string,
   inputClassName: PropTypes.string,
   inputClassName: PropTypes.string
