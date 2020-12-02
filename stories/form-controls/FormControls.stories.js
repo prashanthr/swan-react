@@ -37,6 +37,53 @@ export const TextInput = () => (
   </WrapFormElement>
 )
 
+export const RadioInput = () => (
+  <WrapFormElement title='Radio Input'>
+    <FormControls.RadioInput
+      name={'gender'}
+      choices={[{
+        id: 'male',
+        value: 'male',
+        label: 'Male'
+      }, {
+        id: 'female',
+        value: 'female',
+        label: 'Female'
+      }, {
+        id: 'other',
+        value: 'other',
+        label: 'Other',
+      }]}
+      onChange={action('onChange')}
+      onBlur={action('onBlur')}
+    />
+  </WrapFormElement>
+)
+
+export const CustomRadioInput = () => (
+  <WrapFormElement title='Radio Input'>
+    <FormControls.RadioInput
+      className={'my-custom-radio-input'}
+      name={'gender'}
+      choices={[{
+        id: 'male',
+        value: 'male',
+        label: 'Male'
+      }, {
+        id: 'female',
+        value: 'female',
+        label: 'Female'
+      }, {
+        id: 'other',
+        value: 'other',
+        label: 'Other',
+      }]}
+      onChange={action('onChange')}
+      onBlur={action('onBlur')}
+    />
+  </WrapFormElement>
+)
+
 export const SubmitButton = () => (
   <WrapFormElement title='Submit Button'>
     <FormControls.SubmitButton
