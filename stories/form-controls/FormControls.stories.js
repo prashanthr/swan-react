@@ -26,3 +26,46 @@ export const NumericInput = () => (
     />
   </WrapFormElement>
 )
+
+export const TextInput = () => (
+  <WrapFormElement title='Text Input'>
+    <FormControls.TextInput
+      defaultValue={'Hello'}
+      onChange={action('onChange')}
+      onBlur={action('onBlur')}
+    />
+  </WrapFormElement>
+)
+
+export const SubmitButton = () => (
+  <WrapFormElement title='Submit Button'>
+    <FormControls.SubmitButton
+      onClick={action('onClick')}
+    />
+  </WrapFormElement>
+)
+
+const formSubmitAction = action('onFormSubmit');
+export const Form = () => (
+  <WrapFormElement title='Custom Form'>
+    <FormControls.Form
+      includeSubmitButton
+      onChange={action('onFormChange')}
+      onSubmit={event => {
+        event.preventDefault();
+        formSubmitAction(event);
+      }}
+    >
+      <FormControls.TextInput
+        defaultValue={'Hello'}
+        elementOnly
+      />
+      <br /><br />
+      <FormControls.NumericInput
+        defaultValue={5}
+        elementOnly
+      />
+      <br /><br />
+    </FormControls.Form>
+  </WrapFormElement>
+)
