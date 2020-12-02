@@ -11,8 +11,6 @@ const TextInput = ({
   onFormChange,
   onFormSubmit,
   className,
-  min,
-  max,
   defaultValue,
   value,
   placeholder,
