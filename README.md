@@ -20,6 +20,7 @@ npm i @universal-apps/swan-react
 - Button
 - Card
 - EditableText
+- FormControls
 - Emoji
 - Modal
 - ReCaptcha v2/v3

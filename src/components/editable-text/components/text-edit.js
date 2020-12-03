@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import TextInput from '../../form-controls/components/text-input'
 
 const EditText = ({
   initialText,
@@ -25,12 +26,13 @@ const EditText = ({
   }
 
   return (
-    <input
+    <TextInput
       className={inputClassName}
       value={text}
       placeholder={placeholder}
       onChange={event => onChange({ event })}
       onKeyUp={event => onKeyUp({ event })}
+      onFormSubmit={event => event.preventDefault()}
     />
   )
 }
