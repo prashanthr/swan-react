@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import SubmitButton from './submit-button'
 
 const Form = ({ id, name, className, includeSubmitButton, action, children, onChange, onSubmit }) => (
-  <form onChange={onChange} onSubmit={onSubmit} action={action}>
+  <form id={id} name={name} className={className} onChange={onChange} onSubmit={onSubmit} action={action}>
     {children}
     {includeSubmitButton && <SubmitButton />}
   </form>
