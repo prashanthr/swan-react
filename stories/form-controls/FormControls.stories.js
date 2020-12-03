@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { action } from '@storybook/addon-actions'
 import { FormControls } from '../../src'
+import './index.css'
 
 export default {
   title: 'Form Controls',
@@ -34,6 +35,51 @@ export const TextInput = () => (
       onChange={action('onChange')}
       onBlur={action('onBlur')}
     />
+  </WrapFormElement>
+)
+
+export const RadioInput = () => (
+  <WrapFormElement title='Radio Input'>
+    <FormControls.RadioInput
+      name={'gender'}
+      choices={[{
+        id: 'male',
+        value: 'male',
+        label: 'Male'
+      }, {
+        id: 'female',
+        value: 'female',
+        label: 'Female'
+      }, {
+        id: 'other',
+        value: 'other',
+        label: 'Other',
+      }]}
+      onChange={action('onChange')}
+      onBlur={action('onBlur')}
+    />
+  </WrapFormElement>
+)
+
+export const CustomRadioInput = () => (
+  <WrapFormElement title='Radio Input'>
+    <div className={'my-custom-radio-input'}>
+      <FormControls.RadioInput
+        name={'gender'}
+        choices={[{
+          id: 'toggle-on',
+          value: 'on',
+          label: 'On',
+        }, {
+          id: 'toggle-off',
+          value: 'off',
+          label: 'Off',
+          isSelected: true
+        }]}
+        onChange={action('onChange')}
+        onBlur={action('onBlur')}
+      />
+    </div>
   </WrapFormElement>
 )
 
