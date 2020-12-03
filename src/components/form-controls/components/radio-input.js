@@ -34,7 +34,7 @@ const RadioInput = ({
             onKeyDown={onKeyDown}
             checked={choice.isSelected}
           />
-          {choice.label && <label for={choice.id}>{choice.label}</label>}
+          {choice.label && <label htmlFor={choice.id}>{choice.label}</label>}
         </>
       ))}
     </>
