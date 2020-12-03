@@ -65,7 +65,7 @@ export const CustomRadioInput = () => (
   <WrapFormElement title='Radio Input'>
     <div className={'my-custom-radio-input'}>
       <FormControls.RadioInput
-        name={'gender'}
+        name={'state'}
         choices={[{
           id: 'toggle-on',
           value: 'on',
