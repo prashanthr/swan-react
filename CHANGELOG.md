@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.28](https://github.com/prashanthr/swan-react/compare/v0.0.27...v0.0.28) (2020-12-03)
+
+
+### Bug Fixes
+
+* **form:** Fix unused props ([0e7e785](https://github.com/prashanthr/swan-react/commit/0e7e7858f5f64029c5e08d8ccc013dbee27a32e9))
+
 ### [0.0.27](https://github.com/prashanthr/swan-react/compare/v0.0.26...v0.0.27) (2020-12-03)
 
 
