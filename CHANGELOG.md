@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.27](https://github.com/prashanthr/swan-react/compare/v0.0.26...v0.0.27) (2020-12-03)
+
+
+### Features
+
+* **form-controls:** Add numeric input form control ([#18](https://github.com/prashanthr/swan-react/issues/18)) ([b2d8ac7](https://github.com/prashanthr/swan-react/commit/b2d8ac737f2a7c8b2e829f5c34d20bd35955046f))
+* **form-controls:** Add radio input form control [ch166] ([#19](https://github.com/prashanthr/swan-react/issues/19)) ([06aa425](https://github.com/prashanthr/swan-react/commit/06aa425568b7c2f72815c4684e1369794415d7a7))
+
 ### [0.0.26](https://github.com/prashanthr/swan-react/compare/v0.0.25...v0.0.26) (2020-11-29)
 
 ### [0.0.25](https://github.com/prashanthr/swan-react/compare/v0.0.24...v0.0.25) (2020-11-29)
