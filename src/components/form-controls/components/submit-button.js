@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const SubmitButton = ({ ref, value, className, onClick }) => (
+const SubmitButton = ({ elRef, value, className, onClick }) => (
   <input
-    ref={ref}
+    ref={elRef}
     className={className}
     type='submit'
     value={value}
@@ -18,7 +18,7 @@ SubmitButton.defaultProps = {
 }
 
 SubmitButton.propTypes = {
-  ref: PropTypes.oneOfType([
+  elRef: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.shape({ current: PropTypes.instanceOf(Element) })
   ]),

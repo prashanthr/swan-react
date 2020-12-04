@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SubmitButton from './submit-button'
 
-const Form = ({ id, name, ref, className, includeSubmitButton, action, children, onChange, onSubmit }) => (
-  <form ref={ref} id={id} name={name} className={className} onChange={onChange} onSubmit={onSubmit} action={action}>
+const Form = ({ id, name, elRef, className, includeSubmitButton, action, children, onChange, onSubmit }) => (
+  <form ref={elRef} id={id} name={name} className={className} onChange={onChange} onSubmit={onSubmit} action={action}>
     {children}
     {includeSubmitButton && <SubmitButton />}
   </form>
@@ -11,7 +11,7 @@ const Form = ({ id, name, ref, className, includeSubmitButton, action, children,
 
 Form.propTypes = {
   className: PropTypes.string,
-  ref: PropTypes.oneOfType([
+  elRef: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.shape({ current: PropTypes.instanceOf(Element) })
   ]),

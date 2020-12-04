@@ -5,7 +5,7 @@ import Form from './form'
 const NumericInput = ({
   id,
   name,
-  ref,
+  elRef,
   formRef,
   formId,
   formName,
@@ -26,7 +26,7 @@ const NumericInput = ({
 }) => {
   const inputEl = (
     <input
-      ref={ref}
+      ref={elRef}
       className={className}
       type='number'
       placeholder={placeholder}
@@ -43,7 +43,7 @@ const NumericInput = ({
     />
   )
   return !elementOnly
-    ? <Form ref={formRef} id={formId} name={formName} className={formClassName} onChange={onFormChange} onSubmit={onFormSubmit}>
+    ? <Form elRef={formRef} id={formId} name={formName} className={formClassName} onChange={onFormChange} onSubmit={onFormSubmit}>
         {inputEl}
       </Form>
     : inputEl
@@ -62,7 +62,7 @@ NumericInput.defaultProps = {
 NumericInput.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
-  ref: PropTypes.oneOfType([
+  elRef: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.shape({ current: PropTypes.instanceOf(Element) })
   ]),

@@ -25,6 +25,7 @@ const RadioInput = ({
         <>
           <input
             key={idx}
+            ref={choice.ref}
             className={choice.className || ''}
             type='radio'
             id={choice.id}
@@ -43,7 +44,7 @@ const RadioInput = ({
   )
 
   return !elementOnly
-    ? <Form ref={formRef} id={formId} name={formName} className={formClassName} onChange={onFormChange} onSubmit={onFormSubmit}>
+    ? <Form elRef={formRef} id={formId} name={formName} className={formClassName} onChange={onFormChange} onSubmit={onFormSubmit}>
         {inputEls}
       </Form>
     : inputEls
@@ -68,7 +69,11 @@ RadioInput.propTypes = {
     value: PropTypes.string,
     label: PropTypes.string,
     isSelected: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
+    ref: PropTypes.oneOfType([
+      PropTypes.func,
+      PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+    ]),
   })),
   elementOnly: PropTypes.bool,
   onBlur: PropTypes.func,
