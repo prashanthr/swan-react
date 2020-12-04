@@ -20,7 +20,8 @@ const TextInput = ({
   onBlur,
   onKeyUp,
   onKeyDown,
-  elementOnly
+  elementOnly,
+  autoFocus
 }) => {
   const inputEl = (
     <input
@@ -36,6 +37,7 @@ const TextInput = ({
       onChange={onChange}
       onKeyUp={onKeyUp}
       onKeyDown={onKeyDown}
+      autoFocus={autoFocus}
     />
   )
 
@@ -75,6 +77,7 @@ TextInput.propTypes = {
   value: PropTypes.string,
   defaultValue: PropTypes.string,
   elementOnly: PropTypes.bool,
+  autoFocus: PropTypes.bool,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onKeyUp: PropTypes.func,

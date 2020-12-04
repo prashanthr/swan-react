@@ -22,7 +22,8 @@ const NumericInput = ({
   onBlur,
   onKeyUp,
   onKeyDown,
-  elementOnly
+  elementOnly,
+  autoFocus
 }) => {
   const inputEl = (
     <input
@@ -40,6 +41,7 @@ const NumericInput = ({
       onChange={onChange}
       onKeyUp={onKeyUp}
       onKeyDown={onKeyDown}
+      autoFocus={autoFocus}
     />
   )
   return !elementOnly
@@ -80,12 +82,13 @@ NumericInput.propTypes = {
   min: PropTypes.number,
   max: PropTypes.number,
   elementOnly: PropTypes.bool,
+  autoFocus: PropTypes.bool,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onKeyUp: PropTypes.func,
   onKeyDown: PropTypes.func,
   onFormSubmit: PropTypes.func,
-  onFormChange: PropTypes.func
+  onFormChange: PropTypes.func,
 }
 
 export default NumericInput
