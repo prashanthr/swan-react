@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.31](https://github.com/prashanthr/swan-react/compare/v0.0.30...v0.0.31) (2020-12-04)
+
+
+### Bug Fixes
+
+* **props:** Fix form props ([12c4cca](https://github.com/prashanthr/swan-react/commit/12c4cca5c879b14bcac1c7dcb07822fe85bb3934))
+
 ### [0.0.30](https://github.com/prashanthr/swan-react/compare/v0.0.29...v0.0.30) (2020-12-03)
 
 ### [0.0.29](https://github.com/prashanthr/swan-react/compare/v0.0.28...v0.0.29) (2020-12-03)
