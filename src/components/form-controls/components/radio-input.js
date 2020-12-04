@@ -5,6 +5,7 @@ import Form from './form'
 const RadioInput = ({
   id,
   name,
+  formRef,
   formId,
   formName,
   formClassName,
@@ -27,7 +28,7 @@ const RadioInput = ({
             className={choice.className || ''}
             type='radio'
             id={choice.id}
-            name={choice.name || name}
+            name={choice.name || name} // if choice.name is not the same as the others, it will be grouped differently
             onBlur={onBlur}
             onChange={onChange}
             onKeyUp={onKeyUp}
@@ -42,7 +43,7 @@ const RadioInput = ({
   )
 
   return !elementOnly
-    ? <Form id={formId} name={formName} className={formClassName} onChange={onFormChange} onSubmit={onFormSubmit}>
+    ? <Form ref={formRef} id={formId} name={formName} className={formClassName} onChange={onFormChange} onSubmit={onFormSubmit}>
         {inputEls}
       </Form>
     : inputEls

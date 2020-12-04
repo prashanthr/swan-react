@@ -5,6 +5,8 @@ import Form from './form'
 const TextInput = ({
   id,
   name,
+  ref,
+  formRef,
   formId,
   formName,
   formClassName,
@@ -22,6 +24,7 @@ const TextInput = ({
 }) => {
   const inputEl = (
     <input
+      ref={ref}
       className={className}
       type='text'
       placeholder={placeholder}
@@ -37,7 +40,7 @@ const TextInput = ({
   )
 
   return !elementOnly
-    ? <Form id={formId} name={formName} className={formClassName} onChange={onFormChange} onSubmit={onFormSubmit}>
+    ? <Form ref={formRef} id={formId} name={formName} className={formClassName} onChange={onFormChange} onSubmit={onFormSubmit}>
         {inputEl}
       </Form>
     : inputEl
@@ -54,6 +57,19 @@ TextInput.defaultProps = {
 }
 
 TextInput.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  ref: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+  ]),
+  formRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+  ]),
+  formId: PropTypes.string,
+  formName: PropTypes.string,
+  formClassName: PropTypes.string,
   className: PropTypes.string,
   placeholder: PropTypes.string,
   value: PropTypes.string,
@@ -62,7 +78,9 @@ TextInput.propTypes = {
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onKeyUp: PropTypes.func,
-  onKeyDown: PropTypes.func
+  onKeyDown: PropTypes.func,
+  onFormSubmit: PropTypes.func,
+  onFormChange: PropTypes.func
 }
 
 export default TextInput

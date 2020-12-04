@@ -5,6 +5,8 @@ import Form from './form'
 const NumericInput = ({
   id,
   name,
+  ref,
+  formRef,
   formId,
   formName,
   formClassName,
@@ -24,6 +26,7 @@ const NumericInput = ({
 }) => {
   const inputEl = (
     <input
+      ref={ref}
       className={className}
       type='number'
       placeholder={placeholder}
@@ -40,7 +43,7 @@ const NumericInput = ({
     />
   )
   return !elementOnly
-    ? <Form id={formId} name={formName} className={formClassName} onChange={onFormChange} onSubmit={onFormSubmit}>
+    ? <Form ref={formRef} id={formId} name={formName} className={formClassName} onChange={onFormChange} onSubmit={onFormSubmit}>
         {inputEl}
       </Form>
     : inputEl
@@ -57,6 +60,19 @@ NumericInput.defaultProps = {
 }
 
 NumericInput.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  ref: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+  ]),
+  formRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+  ]),
+  formId: PropTypes.string,
+  formName: PropTypes.string,
+  formClassName: PropTypes.string,
   className: PropTypes.string,
   placeholder: PropTypes.string,
   value: PropTypes.number,
@@ -67,7 +83,9 @@ NumericInput.propTypes = {
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onKeyUp: PropTypes.func,
-  onKeyDown: PropTypes.func
+  onKeyDown: PropTypes.func,
+  onFormSubmit: PropTypes.func,
+  onFormChange: PropTypes.func
 }
 
 export default NumericInput
