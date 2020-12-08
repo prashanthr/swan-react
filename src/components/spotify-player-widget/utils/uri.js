@@ -3,7 +3,8 @@
 
 const BASE_URI = 'https://open.spotify.com/'
 const BASE_IDENTIFIER = 'spotify:'
-export const BASE_EMBED_URI = 'https://open.spotify.com/embed'
+const BASE_EMBED_URI = 'https://open.spotify.com/embed'
+export const UNKNOWN_URI = `${BASE_EMBED_URI}/unknown`
 
 export const isUriValid = (itemUri) => {
   return itemUri && (

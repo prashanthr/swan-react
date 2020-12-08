@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { isUriValid, getUri, BASE_EMBED_URI } from './utils/uri'
+import { isUriValid, getUri, UNKNOWN_URI } from './utils/uri'
 import SizeBreakpoints from './utils/size'
 
 const SpotifyPlayerWidget = ({ itemUri, height, width, compact }) => (
   <iframe
-    src={isUriValid(itemUri) ? getUri(itemUri) : BASE_EMBED_URI}
+    src={isUriValid(itemUri) ? getUri(itemUri) : UNKNOWN_URI}
     width={compact ? SizeBreakpoints.COMPACT_WIDTH : width}
     height={compact ? SizeBreakpoints.COMPACT_HEIGHT : height}
     frameborder='0'
