@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.34](https://github.com/prashanthr/swan-react/compare/v0.0.33...v0.0.34) (2020-12-08)
+
+
+### Bug Fixes
+
+* **spotify:** Fix unknown uri ([20bd6a7](https://github.com/prashanthr/swan-react/commit/20bd6a7cb426cd1427f6c8eb4949332f970c51a9))
+
 ### [0.0.33](https://github.com/prashanthr/swan-react/compare/v0.0.32...v0.0.33) (2020-12-04)
 
 ### [0.0.32](https://github.com/prashanthr/swan-react/compare/v0.0.31...v0.0.32) (2020-12-04)
