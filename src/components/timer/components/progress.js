@@ -48,7 +48,7 @@ const ProgressTimer = ({ start, separator, isPaused, type, strokeColor, classNam
   const [currentTime, setTime] = useState({ hour, minute, second })
   useEffect(() => {
     const timer = setTimeout(() => {
-      setTime(tick({ time: currentTime, countdown: true }))
+      setTime(tick({ time: currentTime, countdown: true, isPaused }))
     }, 1000);
     // Clear timeout if the component is unmounted
     return () => clearTimeout(timer);
