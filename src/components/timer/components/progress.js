@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useTimer } from '../effects/timer'
 import TimerDigits from './timer-digits'
 import TimerDigitSepartor from './timer-digit-separator'
 import { getProgressCircleDashArray } from '../utils/progress'
+import tick from '../effects/tick'
 import './timer-progress.css'
 
 const CircularProgressTimer = ({ start, current, separator, isPaused, strokeColor, className, digitClassName, svgPathStrokeDashArray = 283 }) => {
@@ -42,8 +43,17 @@ const CircularProgressTimer = ({ start, current, separator, isPaused, strokeColo
 }
 
 const ProgressTimer = ({ start, separator, isPaused, type, strokeColor, className, digitClassName }) => {
-  const time = useTimer({ start, isPaused, countdown: true })
-  const svgPathStrokeDashArray = getProgressCircleDashArray(time, start)
+  // const time = useTimer({ start, isPaused, countdown: true })
+  const { hour, minute, second } = start
+  const [currentTime, setTime] = useState({ hour, minute, second })
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTime(tick({ time: currentTime, countdown: true, isPaused }))
+    }, 1000);
+    // Clear timeout if the component is unmounted
+    return () => clearTimeout(timer);
+  })
+  const svgPathStrokeDashArray = getProgressCircleDashArray(currentTime, start)
   switch(type) {
     case 'circular':
     default:
@@ -54,7 +64,7 @@ const ProgressTimer = ({ start, separator, isPaused, type, strokeColor, classNam
           svgPathStrokeDashArray={svgPathStrokeDashArray}
           separator={separator}
           start={start}
-          current={time}
+          current={currentTime}
           isPaused={isPaused}
           strokeColor={strokeColor}
         />
