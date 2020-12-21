@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Countdown, StopWatch, Progress } from './components'
 import tick from './effects/tick'
 
-const Timer = ({ type, start, isPaused, large, className, digitClassName }) => {
+export const TimerWithEffects = ({ type, start, isPaused, large, className, digitClassName, progressOptions }) => {
   const { hour, minute, second } = start
   const isCountdown = (type) => {
     switch (type) {
@@ -25,7 +25,7 @@ const Timer = ({ type, start, isPaused, large, className, digitClassName }) => {
   })
   switch (type) {
     case 'progress':
-      return <Progress className={className} digitClassName={digitClassName} start={start} currentTime={currentTime} isPaused={isPaused} />
+      return <Progress className={className} digitClassName={digitClassName} start={start} currentTime={currentTime} isPaused={isPaused} strokeColor={progressOptions.strokeColor} />
     case 'stopwatch':
       return <StopWatch className={className} digitClassName={digitClassName} start={start} currentTime={currentTime} isPaused={isPaused} large={large} />
     case 'countdown':
@@ -34,16 +34,31 @@ const Timer = ({ type, start, isPaused, large, className, digitClassName }) => {
   }
 }
 
-Timer.propTypes = {
+export const TimerWithoutEffects = ({ type, start, currentTime, isPaused, large, className, digitClassName, progressOptions }) => {
+  switch (type) {
+    case 'progress':
+      return <Progress className={className} digitClassName={digitClassName} start={start} currentTime={currentTime} isPaused={isPaused} strokeColor={progressOptions.strokeColor} />
+    case 'stopwatch':
+      return <StopWatch className={className} digitClassName={digitClassName} start={start} currentTime={currentTime} isPaused={isPaused} large={large} />
+    case 'countdown':
+    default:
+      return <Countdown className={className} digitClassName={digitClassName} start={start} currentTime={currentTime} isPaused={isPaused} large={large} />
+  }
+}
+
+const propTypes = {
   type: PropTypes.oneOf(['countdown', 'stopwatch', 'progress']),
   isPaused: PropTypes.bool,
   large: PropTypes.bool,
   className: PropTypes.string,
   digitClassName: PropTypes.string,
-  start: PropTypes.shape({ hour: PropTypes.number, minute: PropTypes.number, second: PropTypes.number })
+  start: PropTypes.shape({ hour: PropTypes.number, minute: PropTypes.number, second: PropTypes.number }),
+  progressOptions: PropTypes.shape({
+    strokeColor: PropTypes.string
+  })
 }
 
-Timer.defaultProps = {
+const defaultProps = {
   type: 'countdown',
   isPaused: false,
   large: false,
@@ -53,7 +68,18 @@ Timer.defaultProps = {
     hour: 0,
     minute: 0,
     second: 0
+  },
+  progressOptions: {
+    strokeColor: 'green'
   }
 }
 
-export default Timer
+TimerWithEffects.propTypes = propTypes
+TimerWithEffects.defaultProps = defaultProps
+TimerWithoutEffects.defaultProps = defaultProps
+TimerWithoutEffects.propTypes = {
+  ...propTypes,
+  currentTime: PropTypes.shape({ hour: PropTypes.number, minute: PropTypes.number, second: PropTypes.number })
+}
+
+export const effects = { tick }
