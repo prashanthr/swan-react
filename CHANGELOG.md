@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.37](https://github.com/prashanthr/swan-react/compare/v0.0.36...v0.0.37) (2020-12-21)
+
+
+### Bug Fixes
+
+* **timer:** Add timer with no effects ([#22](https://github.com/prashanthr/swan-react/issues/22)) ([fc64cdf](https://github.com/prashanthr/swan-react/commit/fc64cdffb75375d241dc5539f1586eec1067b317))
+
 ### [0.0.36](https://github.com/prashanthr/swan-react/compare/v0.0.35...v0.0.36) (2020-12-21)
 
 
