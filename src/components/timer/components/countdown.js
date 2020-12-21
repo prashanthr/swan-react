@@ -2,11 +2,10 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import TimerDigits from './timer-digits'
 import TimerDigitSepartor from './timer-digit-separator'
-import { useTimer } from '../effects/timer'
 import './timer-basic.css'
 
-const CountdownTimer = ({ start, separator, isPaused, large, className, digitClassName }) => {
-  const { hour, minute, second } = useTimer({ start, isPaused, countdown: true })
+const CountdownTimer = ({ start, currentTime, separator, isPaused, large, className, digitClassName }) => {
+  const { hour, minute, second } = currentTime
   return (
     <div
       className={`swan-timer-basic-wrap ${large ? 'swan-timer-basic-wrap-large' : ''} ${className}`}
@@ -29,7 +28,8 @@ CountdownTimer.propTypes = {
   large: PropTypes.bool,
   className: PropTypes.string,
   digitClassName: PropTypes.string,
-  start: PropTypes.shape({ hour: PropTypes.number, minute: PropTypes.number, second: PropTypes.number })
+  start: PropTypes.shape({ hour: PropTypes.number, minute: PropTypes.number, second: PropTypes.number }),
+  currentTime: PropTypes.shape({ hour: PropTypes.number, minute: PropTypes.number, second: PropTypes.number })
 }
 
 CountdownTimer.defaultProps = {

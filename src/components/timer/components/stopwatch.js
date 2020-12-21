@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import TimerDigits from './timer-digits'
-import { useTimer } from '../effects/timer'
-import './timer-basic.css'
 import TimerDigitSepartor from './timer-digit-separator'
+import './timer-basic.css'
 
-const StopWatch = ({ start, separator, isPaused, large, className, digitClassName }) => {
-  const { hour, minute, second } = useTimer({ start, isPaused, countdown: false })
+const StopWatch = ({ start, currentTime, separator, isPaused, large, className, digitClassName }) => {
+  const { hour, minute, second } = currentTime
   return (
     <div
       className={`swan-timer-basic-wrap ${large ? 'swan-timer-basic-wrap-large' : ''} ${className}`}
