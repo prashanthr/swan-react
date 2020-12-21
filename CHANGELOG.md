@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.36](https://github.com/prashanthr/swan-react/compare/v0.0.35...v0.0.36) (2020-12-21)
+
+
+### Bug Fixes
+
+* **timer-hooks:** Move timer hooks up the chain ([#21](https://github.com/prashanthr/swan-react/issues/21)) ([31a6fd3](https://github.com/prashanthr/swan-react/commit/31a6fd3997a9460d5853d0fb5ea850b7c568fc7e))
+
 ### [0.0.35](https://github.com/prashanthr/swan-react/compare/v0.0.34...v0.0.35) (2020-12-20)
 
 
