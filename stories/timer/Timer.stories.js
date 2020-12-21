@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
-import { Timer, Button } from '../../src'
+import { Timer as TimerImports, Button } from '../../src'
 import './index.css'
+
+const TimerWithEffects = TimerImports.TimerWithEffects
+const Timer = TimerImports.Timer
 
 export default {
   title: 'Timer',
-  component: Timer,
+  component: TimerWithEffects,
 }
 
 const defaultStopwatchStart = { hour: 0, minute: 0, second: 0 }
@@ -13,7 +16,7 @@ const defaultCountdownStart = { hour: 0, minute: 0, second: 15 }
 export const SimpleStopwatchTimer = () => {
   return (
     <div>
-      <Timer
+      <TimerWithEffects
         type={'stopwatch'}
         start={defaultStopwatchStart}
         large
@@ -26,7 +29,7 @@ export const PausableStopwatchTimer = () => {
   const [isPaused, pause] = useState(false)
   return (
     <div>
-      <Timer
+      <TimerWithEffects
         type={'stopwatch'}
         isPaused={isPaused}
         start={defaultStopwatchStart}
@@ -45,7 +48,7 @@ export const PausableStopwatchTimer = () => {
 export const SimpleCountdownTimer = () => {
   return (
     <div>
-      <Timer
+      <TimerWithEffects
         type={'countdown'}
         start={defaultCountdownStart}
         large
@@ -58,7 +61,7 @@ export const PausableCountdownTimer = () => {
   const [isPaused, pause] = useState(false)
   return (
     <div>
-      <Timer
+      <TimerWithEffects
         type={'countdown'}
         isPaused={isPaused}
         start={defaultCountdownStart}
@@ -76,7 +79,7 @@ export const PausableCountdownTimer = () => {
 export const SimpleCountdownProgressTimer = () => {
   return (
     <div>
-      <Timer
+      <TimerWithEffects
         type={'progress'}
         start={defaultCountdownStart}
       />
@@ -89,7 +92,7 @@ export const PausableCountdownProgressTimer = () => {
   const [isPaused, pause] = useState(false)
   return (
     <div>
-      <Timer
+      <TimerWithEffects
         type={'progress'}
         isPaused={isPaused}
         start={defaultCountdownStart}
@@ -106,12 +109,33 @@ export const PausableCountdownProgressTimer = () => {
 export const SimpleCountdownProgressTimerDarkCustom = () => {
   return (
     <div>
-      <Timer
+      <TimerWithEffects
         type={'progress'}
+        progressOptions={{ strokeColor: 'orange' }}
         start={defaultCountdownStart}
         className={'swan-progress-dark-example'}
         digitClassName={'swan-progress-dark-example-digit'}
       />
+    </div>
+  )
+}
+
+export const TimerWithNoEffects = () => {
+  const currentTime = { ...defaultCountdownStart, second: defaultCountdownStart.second - 2 }
+  return (
+    <div>
+      <Timer
+        type={'progress'}
+        start={defaultCountdownStart}
+        currentTime={currentTime}
+        large
+      />
+      <div>
+        Here's a timer with no effects where you manage your own current time. <br />
+        Effects are included with the exports, see the TimerWithEffects example in the repo to set it up yourself.<br /><br />
+        Start: {JSON.stringify(defaultCountdownStart)}<br />
+        Current Time: {JSON.stringify(currentTime)}<br />
+      </div>
     </div>
   )
 }

@@ -8,7 +8,13 @@ import FormControls from './components/form-controls'
 import Modal from './components/modal'
 import Recaptcha from './components/recaptcha'
 import SpotifyPlayerWidget from './components/spotify-player-widget'
-import Timer from './components/timer'
+import { TimerWithoutEffects, TimerWithEffects, effects } from './components/timer'
+
+const Timer = {
+  Timer: TimerWithoutEffects,
+  TimerWithEffects,
+  effects
+}
 
 export {
   Audio,
