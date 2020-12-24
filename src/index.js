@@ -6,14 +6,22 @@ import EditableText from './components/editable-text'
 import Emoji from './components/emoji'
 import FormControls from './components/form-controls'
 import Modal from './components/modal'
+import { NotificationsProvider, NotificationsSystem, themes, effects as NotificationEffects } from './components/notifications'
 import Recaptcha from './components/recaptcha'
 import SpotifyPlayerWidget from './components/spotify-player-widget'
-import { TimerWithoutEffects, TimerWithEffects, effects } from './components/timer'
+import { TimerWithoutEffects, TimerWithEffects, effects as TimerEffects } from './components/timer'
 
 const Timer = {
   Timer: TimerWithoutEffects,
   TimerWithEffects,
-  effects
+  effects: TimerEffects
+}
+
+const Notifications = {
+  NotificationsProvider,
+  NotificationsSystem,
+  themes,
+  effects: NotificationEffects
 }
 
 export {
@@ -27,5 +35,6 @@ export {
   Modal,
   Recaptcha,
   SpotifyPlayerWidget,
-  Timer
+  Timer,
+  Notifications
 }
