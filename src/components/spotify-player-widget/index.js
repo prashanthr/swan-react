@@ -8,7 +8,7 @@ const SpotifyPlayerWidget = ({ itemUri, height, width, compact }) => (
     src={isUriValid(itemUri) ? getUri(itemUri) : UNKNOWN_URI}
     width={compact ? SizeBreakpoints.COMPACT_WIDTH : width}
     height={compact ? SizeBreakpoints.COMPACT_HEIGHT : height}
-    frameborder='0'
+    frameBorder='0'
     allowtransparency='true'
     allow='encrypted-media'
   />
