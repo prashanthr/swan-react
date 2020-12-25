@@ -1,6 +1,7 @@
 .swan-react-button {
-  display:block;
-  outline:none;
+  display: block;
+  outline: none;
+  cursor: pointer;
 }
 
 .swan-react-button-unbordered {
