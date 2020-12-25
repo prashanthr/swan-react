@@ -8,11 +8,12 @@ import './index.css'
 
 const effects = { copyToClipboard }
 
-const CopyToClipboard = ({ elementId, text, isInput, className, customButton, buttonText, buttonEmoji, showButtonEmoji, buttonClassName, onCopy }) => (
+const CopyToClipboard = ({ elementId, text, isInput, inputClassName, className, customButton, buttonText, buttonClassName, onCopy }) => (
   <div className={`swan-copy-to-clipboard ${className}`}>
     {isInput
       ? (
           <FormControls.TextInput
+            className={inputClassName}
             id={elementId}
             defaultValue={text}
           />
@@ -35,7 +36,7 @@ const CopyToClipboard = ({ elementId, text, isInput, className, customButton, bu
       : (
         <Button
           className={`${buttonClassName}`}
-          value={`${buttonText} ${showButtonEmoji ? buttonEmoji : ''}`}
+          value={`${buttonText}`}
           onClick={() => effects.copyToClipboard({
             elementId,
             isInputEl: isInput,
@@ -53,21 +54,19 @@ CopyToClipboard.propTypes = {
   text: PropTypes.string,
   isInput: PropTypes.bool,
   className: PropTypes.string,
+  inputClassName: PropTypes.string,
   customButton: PropTypes.element,
   buttonClassName: PropTypes.string,
   buttonText: PropTypes.string,
-  buttonEmoji: PropTypes.string,
-  showButtonEmoji: PropTypes.bool,
   onCopy: PropTypes.func
 }
 
 CopyToClipboard.defaultProps = {
   elementId: uuid({ short: true }),
   className: '',
+  inputClassName: '',
   buttonClassName: '',
-  buttonText: 'Copy',
-  buttonEmoji: '📋',
-  showButtonEmoji: true
+  buttonText: 'Copy 📋'
 }
 
 export {
