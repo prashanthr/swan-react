@@ -1,0 +1,40 @@
+.copy-to-clip-btn {
+  display: inline;
+  font-size: 10px;
+  margin-left: 1rem;
+}
+
+/* https://www.w3schools.com/howto/howto_js_copy_clipboard.asp */
+
+.custom-input {
+  box-sizing: inherit;
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  padding: 8px;
+  display: block;
+  border: 1px solid #ccc!important;
+  margin-right: 16px!important;
+  float: left!important;
+  width: auto;
+}
+
+.custom-btn {
+  box-sizing: inherit;
+  font: inherit;
+  margin: 0;
+  text-transform: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  border: 1px solid #ccc!important;
+  float: left !important;
+  color: #000!important;
+  background-color: #f1f1f1!important;
+}
