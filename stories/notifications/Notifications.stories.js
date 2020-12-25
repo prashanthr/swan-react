@@ -50,7 +50,15 @@ const AComponent = () => {
       notify('Uploading your file...', 'loading', {
         dismissible: true,
       })
-      notify('Welcome to the documentation', 'info')
+      notify('Welcome to the documentation', 'info', { dismissible: true })
+      notify({
+        id: 'custom-id',
+        title: 'Welcome to the demo!',
+        message: 'Use the notification creator to discover what you can do with it.',
+        status: 'loading',
+        dismissible: false,
+        dismissAfter: 0,
+      })
   },[])
 
   return (
