@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './index.css'
 
-const Button = ({ withBorder, onClick, isDisabled, className, value }) => (
+const Button = ({ id, withBorder, onClick, isDisabled, className, value }) => (
   <button
+    id={id}
     onClick={onClick}
     className={`swan-react-button ${!withBorder ? 'swan-react-button-unbordered' : ''} ${className}`}
     disabled={isDisabled}
@@ -13,6 +14,7 @@ const Button = ({ withBorder, onClick, isDisabled, className, value }) => (
 )
 
 Button.propTypes = {
+  id: PropTypes.string,
   isDisabled: PropTypes.bool,
   className: PropTypes.string,
   withBorder: PropTypes.bool,
