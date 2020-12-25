@@ -4,6 +4,8 @@
   margin-left: 1rem;
 }
 
+/* https://www.w3schools.com/howto/howto_js_copy_clipboard.asp */
+
 .custom-input {
   box-sizing: inherit;
   font: inherit;
