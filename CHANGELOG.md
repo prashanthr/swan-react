@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.38](https://github.com/prashanthr/swan-react/compare/v0.0.37...v0.0.38) (2020-12-25)
+
+
+### Features
+
+* **copy-to-clipboard:** Add copy to clipboard component and copy effect ([#23](https://github.com/prashanthr/swan-react/issues/23)) ([c66f5dc](https://github.com/prashanthr/swan-react/commit/c66f5dc23ea8b0aa93a1916f62ab7d93d4051645))
+
 ### [0.0.37](https://github.com/prashanthr/swan-react/compare/v0.0.36...v0.0.37) (2020-12-21)
 
 
