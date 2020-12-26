@@ -3,7 +3,8 @@
 Re-usable React Components
 
 ## Demo
-View all the components live at https://prashanthr.github.io/swan-react/
+
+https://prashanthr.github.io/swan-react/
 
 ## Installation
 
@@ -19,10 +20,12 @@ npm i @universal-apps/swan-react
 - AudioPlayer
 - Button
 - Card
+- CopyToClipboard
 - EditableText
 - FormControls
 - Emoji
 - Modal
+- Notifications
 - ReCaptcha v2/v3
 - Spotify Player Widget
 - Timer (Stopwatch, Countdown and Circular Progress)
