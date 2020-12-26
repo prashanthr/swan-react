@@ -20,26 +20,15 @@ const AppNotificationsWrapper = ({ children }) => {
   setUpNotifications({
     defaultProps: {
         position: 'top-right',
-        dismissible: true
-        // id: string;
-        // title?: string;
-        // message?: string;
-        // status: Status;
-        // position: Position;
-        // buttons: NotificationButton[];
-        // image?: string;
-        // dismissAfter?: number;
-        // dismissible?: boolean;
-        // onAdd?: (...args: any[]) => void;
-        // onDismiss?: (...args: any[]) => void;
-        // showDismissButton?: boolean;
-        // allowHTML?: boolean;
+        dismissible: true,
+        showDismissButton: true,
+        onAdd: () => console.log('Notification added'),
+        onDismiss: () => console.log('Notification dismissed')
     },
     // customizeNotification: ((notification: NewNotification) => void) | null;
     generateId: () => new Date().getTime().toString()
   })
 
-  console.log('notifications to disp', notifications)
   return (
       <div>
           <NotificationsSystem
@@ -57,26 +46,40 @@ const AppNotificationsWrapper = ({ children }) => {
 
 const ComponentWithAppNotifications = () => {
   // 1. Retrieve the action to create/update a notification.
-  const { notify } = useNotifications()
-
+  const { notify, notifications } = useNotifications()
   useEffect(() => {
       // 2. Create a notification.
       console.log('Dispatching notifications...')
+      let updateableNotification = {
+        id: 'custom-id',
+        title: 'Welcome to the demo!',
+        message: 'This notification is currently not dismissable to denote pending state',
+        status: statuses.loading,
+        dismissible: false,
+        dismissAfter: 0,
+      }
       notify({
         title: 'Welcome to the documentation',
         status: statuses.info,
         dismissible: true,
         dismissAfter: 2500
       })
-      notify({
-        id: 'custom-id',
-        title: 'Welcome to the demo!',
-        message: 'Use the notification creator to discover what you can do with it.',
-        status: statuses.loading,
-        dismissible: false,
-        dismissAfter: 0,
-      })
-  },[])
+      notify(updateableNotification)
+      setTimeout(() => {
+        notify({
+          ...updateableNotification,
+          status: statuses.success,
+          buttons: [{
+            name: 'Got it',
+            primary: true
+          }],
+          allowHTML: true,
+          message: '<span>It has been updated.<br /><br />You can now dismiss it or it will auto dismiss in some time',
+          dismissAfter: 5000,
+          dismissible: true
+        })
+      }, 5000)
+    }, [])
 
   return (
       <div>
