@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.41](https://github.com/prashanthr/swan-react/compare/v0.0.40...v0.0.41) (2020-12-26)
+
+
+### Features
+
+* **app-notifications:** Add in-app notifications library [ch199] ([#24](https://github.com/prashanthr/swan-react/issues/24)) ([e388c62](https://github.com/prashanthr/swan-react/commit/e388c622a1707f8e39a40056a03a6311c3b30d7c))
+
 ### [0.0.40](https://github.com/prashanthr/swan-react/compare/v0.0.39...v0.0.40) (2020-12-25)
 
 ### [0.0.39](https://github.com/prashanthr/swan-react/compare/v0.0.38...v0.0.39) (2020-12-25)
