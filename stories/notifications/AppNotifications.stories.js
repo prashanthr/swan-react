@@ -5,6 +5,9 @@ import './index.css'
 const { NotificationsProvider, NotificationsSystem, themes, effects, statuses } = Notifications.appNotifications
 const { useNotifications, setUpNotifications } = effects
 const { atalhoTheme } = themes
+
+const LIBRARY_SOURCE = 'https://github.com/LouisBarranqueiro/reapop'
+
 export const AppNotificationExample = () => {
   return (
       <NotificationsProvider>
@@ -84,6 +87,11 @@ const ComponentWithAppNotifications = () => {
   return (
       <div>
         Hello, Notifications!
+        <br />
+        This was made possible by this&nbsp;
+        <a href={LIBRARY_SOURCE} target='_blank' rel='noreferrer noopener'>
+          amazing library
+        </a>
       </div>
   )
 }
