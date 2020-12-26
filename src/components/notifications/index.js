@@ -1,21 +1,23 @@
-// https://github.com/LouisBarranqueiro/reapop#with-react-alone-react--1680
-
-import NotificationsSystem, {
-  atalhoTheme,
-  baseTheme,
-  bootstrapTheme,
-  wyboTheme,
-  NotificationsProvider,
-  useNotifications,
-  setUpNotifications
-} from 'reapop'
-
-const effects = { useNotifications, setUpNotifications }
-const themes = { atalhoTheme, baseTheme, bootstrapTheme, wyboTheme }
-
-export {
+import {
   NotificationsProvider,
   NotificationsSystem,
-  effects,
-  themes
+  themes as NotificationThemes,
+  effects as NotificationEffects,
+  statuses as NotificationStatuses,
+  positions as NotificationPositions,
+  transitions as NotificationTransitions
+} from './app'
+
+const appNotifications = {
+  NotificationsProvider,
+  NotificationsSystem,
+  themes: NotificationThemes,
+  effects: NotificationEffects,
+  statuses: NotificationStatuses,
+  positions: NotificationPositions,
+  transitions: NotificationTransitions
+}
+
+export {
+  appNotifications
 }

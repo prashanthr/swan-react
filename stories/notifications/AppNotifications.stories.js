@@ -1,26 +1,40 @@
 import React, { useEffect } from 'react'
 import { Notifications } from '../../src'
 
-const { NotificationsProvider, NotificationsSystem, themes, effects } = Notifications
+const { NotificationsProvider, NotificationsSystem, themes, effects } = Notifications.appNotifications
 const { useNotifications, setUpNotifications } = effects
 const { atalhoTheme } = themes
-export const ARootComponent = () => {
+export const AppNotificationExample = () => {
   return (
       <NotificationsProvider>
-          <ATopLevelComponent>
-            <AComponent />
-          </ATopLevelComponent>
+          <AppNotificationsWrapper>
+            <ComponentWithAppNotifications />
+          </AppNotificationsWrapper>
       </NotificationsProvider>
   )
 }
-const ATopLevelComponent = ({ children }) => {
+const AppNotificationsWrapper = ({ children }) => {
   // 1. Retrieve the notifications to display, and the function used to dismiss a notification.
   const { notifications, dismissNotification } = useNotifications()
   setUpNotifications({
     defaultProps: {
         position: 'top-right',
         dismissible: true
+        // id: string;
+        // title?: string;
+        // message?: string;
+        // status: Status;
+        // position: Position;
+        // buttons: NotificationButton[];
+        // image?: string;
+        // dismissAfter?: number;
+        // dismissible?: boolean;
+        // onAdd?: (...args: any[]) => void;
+        // onDismiss?: (...args: any[]) => void;
+        // showDismissButton?: boolean;
+        // allowHTML?: boolean;
     },
+    // customizeNotification: ((notification: NewNotification) => void) | null;
     generateId: () => new Date().getTime().toString()
   })
 
@@ -40,16 +54,13 @@ const ATopLevelComponent = ({ children }) => {
   )
 }
 
-const AComponent = () => {
+const ComponentWithAppNotifications = () => {
   // 1. Retrieve the action to create/update a notification.
   const { notify } = useNotifications()
 
   useEffect(() => {
       // 2. Create a notification.
-      console.log('dispatching a notification')
-      notify('Uploading your file...', 'loading', {
-        dismissible: true,
-      })
+      console.log('Dispatching notifications...')
       notify('Welcome to the documentation', 'info', { dismissible: true })
       notify({
         id: 'custom-id',
@@ -63,12 +74,12 @@ const AComponent = () => {
 
   return (
       <div>
-        Hi
+        Hello, Notifications!
       </div>
   )
 }
 
 export default {
   title: 'Notifications',
-  component: ARootComponent
+  component: NotificationExample
 }
