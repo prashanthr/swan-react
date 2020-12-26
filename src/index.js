@@ -7,9 +7,10 @@ import EditableText from './components/editable-text'
 import Emoji from './components/emoji'
 import FormControls from './components/form-controls'
 import Modal from './components/modal'
+import { appNotifications } from './components/notifications'
 import Recaptcha from './components/recaptcha'
 import SpotifyPlayerWidget from './components/spotify-player-widget'
-import { TimerWithoutEffects, TimerWithEffects, effects } from './components/timer'
+import { TimerWithoutEffects, TimerWithEffects, effects as TimerEffects } from './components/timer'
 
 const CopyToClipboard = {
   CopyToClipboard: CopyComponent,
@@ -19,7 +20,11 @@ const CopyToClipboard = {
 const Timer = {
   Timer: TimerWithoutEffects,
   TimerWithEffects,
-  effects
+  effects: TimerEffects
+}
+
+const Notifications = {
+  appNotifications
 }
 
 export {
@@ -34,5 +39,6 @@ export {
   Modal,
   Recaptcha,
   SpotifyPlayerWidget,
-  Timer
+  Timer,
+  Notifications
 }
