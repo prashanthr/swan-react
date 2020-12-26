@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import { Notifications } from '../../src'
+import './index.css'
 
-const { NotificationsProvider, NotificationsSystem, themes, effects } = Notifications.appNotifications
+const { NotificationsProvider, NotificationsSystem, themes, effects, statuses } = Notifications.appNotifications
 const { useNotifications, setUpNotifications } = effects
 const { atalhoTheme } = themes
 export const AppNotificationExample = () => {
@@ -61,12 +62,17 @@ const ComponentWithAppNotifications = () => {
   useEffect(() => {
       // 2. Create a notification.
       console.log('Dispatching notifications...')
-      notify('Welcome to the documentation', 'info', { dismissible: true })
+      notify({
+        title: 'Welcome to the documentation',
+        status: statuses.info,
+        dismissible: true,
+        dismissAfter: 2500
+      })
       notify({
         id: 'custom-id',
         title: 'Welcome to the demo!',
         message: 'Use the notification creator to discover what you can do with it.',
-        status: 'loading',
+        status: statuses.loading,
         dismissible: false,
         dismissAfter: 0,
       })
@@ -81,5 +87,5 @@ const ComponentWithAppNotifications = () => {
 
 export default {
   title: 'Notifications',
-  component: NotificationExample
+  component: AppNotificationExample
 }
