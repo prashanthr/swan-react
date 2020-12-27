@@ -8,6 +8,7 @@ import Emoji from './components/emoji'
 import FormControls from './components/form-controls'
 import Modal from './components/modal'
 import { appNotifications } from './components/notifications'
+import Progress from './components/progress'
 import Recaptcha from './components/recaptcha'
 import SpotifyPlayerWidget from './components/spotify-player-widget'
 import { TimerWithoutEffects, TimerWithEffects, effects as TimerEffects } from './components/timer'
@@ -37,8 +38,9 @@ export {
   Emoji,
   FormControls,
   Modal,
+  Notifications,
+  Progress,
   Recaptcha,
   SpotifyPlayerWidget,
-  Timer,
-  Notifications
+  Timer
 }
