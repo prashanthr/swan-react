@@ -1,0 +1,14 @@
+.swan-progress {
+  width: 100%;
+}
+
+/* Indeterminate */
+.swan-progress progress:not([value]) {
+
+}
+
+/* Determinate */
+.swan-progress progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+}
