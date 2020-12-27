@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.42](https://github.com/prashanthr/swan-react/compare/v0.0.41...v0.0.42) (2020-12-27)
+
+
+### Features
+
+* **progress:** Add progress bar component [ch204] ([#25](https://github.com/prashanthr/swan-react/issues/25)) ([988b896](https://github.com/prashanthr/swan-react/commit/988b896923804d94f230049aa9443fb9138df73b))
+
 ### [0.0.41](https://github.com/prashanthr/swan-react/compare/v0.0.40...v0.0.41) (2020-12-26)
 
 
