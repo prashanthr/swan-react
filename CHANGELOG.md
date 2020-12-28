@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.43](https://github.com/prashanthr/swan-react/compare/v0.0.42...v0.0.43) (2020-12-28)
+
+
+### Bug Fixes
+
+* **notifications:** Remove notifications temporarily, add radio-input label className ([bb2a4cc](https://github.com/prashanthr/swan-react/commit/bb2a4cc1810e63b3ac20cdd0cc26d2384631b86f))
+
 ### [0.0.42](https://github.com/prashanthr/swan-react/compare/v0.0.41...v0.0.42) (2020-12-27)
 
 
