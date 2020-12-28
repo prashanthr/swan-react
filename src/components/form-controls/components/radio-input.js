@@ -37,7 +37,7 @@ const RadioInput = ({
             value={choice.value}
             checked={choice.isSelected}
           />
-          {choice.label && <label htmlFor={choice.id}>{choice.label}</label>}
+          {choice.label && <label className={choice.labelClassName || ''} htmlFor={choice.id}>{choice.label}</label>}
         </>
       ))}
     </>
@@ -70,6 +70,7 @@ RadioInput.propTypes = {
     label: PropTypes.string,
     isSelected: PropTypes.bool,
     className: PropTypes.string,
+    labelClassName: PropTypes.string,
     ref: PropTypes.oneOfType([
       PropTypes.func,
       PropTypes.shape({ current: PropTypes.instanceOf(Element) })

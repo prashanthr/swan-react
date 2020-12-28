@@ -38,7 +38,7 @@ export {
   Emoji,
   FormControls,
   Modal,
-  Notifications,
+  // Notifications, // This is a WIP
   Progress,
   Recaptcha,
   SpotifyPlayerWidget,
