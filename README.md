@@ -25,7 +25,7 @@ npm i @universal-apps/swan-react
 - FormControls
 - Emoji
 - Modal
-- Notifications
+- Notifications (Coming soon)
 - ReCaptcha v2/v3
 - Spotify Player Widget
 - Timer (Stopwatch, Countdown and Circular Progress)
