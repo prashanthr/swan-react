@@ -7,7 +7,6 @@ import EditableText from './components/editable-text'
 import Emoji from './components/emoji'
 import FormControls from './components/form-controls'
 import Modal from './components/modal'
-import { appNotifications } from './components/notifications'
 import Progress from './components/progress'
 import Recaptcha from './components/recaptcha'
 import SpotifyPlayerWidget from './components/spotify-player-widget'
@@ -24,10 +23,6 @@ const Timer = {
   effects: TimerEffects
 }
 
-const Notifications = {
-  appNotifications
-}
-
 export {
   Audio,
   AudioPlayer,
@@ -38,7 +33,6 @@ export {
   Emoji,
   FormControls,
   Modal,
-  // Notifications, // This is a WIP
   Progress,
   Recaptcha,
   SpotifyPlayerWidget,
