@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/prashanthr/swan-react/compare/v0.0.43...v1.0.0) (2021-01-28)
+
+
+### Features
+
+* **video:** Add video player component with all specs [ch244] and Audio, AudioPlayer fixes ([#30](https://github.com/prashanthr/swan-react/issues/30)) ([8617971](https://github.com/prashanthr/swan-react/commit/861797100f2687fb54cdc97971deb203a5c6f56e))
+
 ### [0.0.43](https://github.com/prashanthr/swan-react/compare/v0.0.42...v0.0.43) (2020-12-28)
 
 
