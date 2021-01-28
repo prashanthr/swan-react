@@ -54,8 +54,7 @@
   },
   "dependencies": {
     "react-google-recaptcha": "^2.1.0",
-    "react-google-recaptcha-v3": "^1.5.2",
-    "reapop": "^3.0.1"
+    "react-google-recaptcha-v3": "^1.5.2"
   },
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
