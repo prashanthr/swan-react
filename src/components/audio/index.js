@@ -60,7 +60,7 @@ Audio.propTypes = {
 
 Audio.defaultProps = {
   className: '',
-  showControls: false,
+  showControls: true,
   tracks: [{ kind: 'captions' }],
   sources: []
 }

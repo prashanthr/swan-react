@@ -11,6 +11,7 @@ import Progress from './components/progress'
 import Recaptcha from './components/recaptcha'
 import SpotifyPlayerWidget from './components/spotify-player-widget'
 import { TimerWithoutEffects, TimerWithEffects, effects as TimerEffects } from './components/timer'
+import Video from './components/video'
 
 const CopyToClipboard = {
   CopyToClipboard: CopyComponent,
@@ -36,5 +37,6 @@ export {
   Progress,
   Recaptcha,
   SpotifyPlayerWidget,
-  Timer
+  Timer,
+  Video
 }

@@ -14,7 +14,6 @@ export const SimpleAudio = () => {
       <br />
       <Audio
         src={exampleAudioSrc}
-        showControls
       />
       <br />
       <a href={exampleSrc} target='_blank'>Source</a>
