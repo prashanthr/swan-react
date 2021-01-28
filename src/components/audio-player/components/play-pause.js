@@ -16,7 +16,7 @@ const PlayPause = ({ onPlayPause, isPlaying, CustomComponent }) => (
 
 PlayPause.propTypes = {
   isPlaying: PropTypes.bool,
-  customComponent: PropTypes.element
+  CustomComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
 }
 
 PlayPause.defaultProps = {

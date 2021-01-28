@@ -29,23 +29,6 @@ const Sources = () => (
   </div>
 )
 
-export const SimpleAudioPlayer = () => {
-  return (
-    <div>
-      <br />
-      <AudioPlayer
-        trackSrc={exampleAudioSrc}
-        trackName={trackName}
-        albumArtSrc={albumArtImgSrc}
-        artist={artist}
-        album={albumName}
-      />
-      <Sources />
-    </div>
-  )
-}
-
-
 export const CustomAudioPlayer = () => {
   const CustomPlayPause = ({ onPlayPause, isPlaying }) => (
     <Button
@@ -85,6 +68,8 @@ export const CustomAudioPlayer = () => {
       <br />
       <AudioPlayer
         className={'custom-audio-player'}
+        trackInfoClassName={'custom-audio-player-common'}
+        durationClassName={'custom-audio-player-common'}
         trackSrc={exampleAudioSrc}
         trackName={trackName}
         albumArtSrc={albumArtImgSrc}
@@ -95,6 +80,22 @@ export const CustomAudioPlayer = () => {
       />
       <Sources />
       <h3>Note: A lot more customization is available. Check out the docs/props to see what you can do</h3>
+    </div>
+  )
+}
+
+export const SimpleAudioPlayer = () => {
+  return (
+    <div>
+      <br />
+      <AudioPlayer
+        trackSrc={exampleAudioSrc}
+        trackName={trackName}
+        albumArtSrc={albumArtImgSrc}
+        artist={artist}
+        album={albumName}
+      />
+      <Sources />
     </div>
   )
 }

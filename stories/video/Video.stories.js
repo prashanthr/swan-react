@@ -43,19 +43,3 @@ export const SimpleVideoWithSources = () => {
     </div>
   )
 }
-
-export const SimpleVideoWithPictureInPicture = () => {
-  return (
-    <div>
-      Play the video and try changing tabs
-      <br />
-      <Video
-        src={`${exampleSourcesBasePath}/flower.mp4`}
-        width={'50%'}
-        autoPictureInPicture={true}
-      />
-      <br />
-      <a href={exampleSrc} target='_blank'>Source</a>
-    </div>
-  )
-}

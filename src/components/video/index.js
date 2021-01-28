@@ -16,7 +16,6 @@ const Video = ({
   sources,
   poster,
   disablePictureInPicture,
-  autoPictureInPicture,
   onCanPlay,
   onLoadedMetadata,
   onPlay,
@@ -44,7 +43,6 @@ const Video = ({
     preload={preloadMethod}
     autoPlay={autoPlay}
     poster={poster}
-    autoPictureInPicture={autoPictureInPicture}
     disablePictureInPicture={disablePictureInPicture}
     onLoadedMetadata={onLoadedMetadata}
     onCanPlay={onCanPlay}
@@ -88,7 +86,6 @@ Video.propTypes = {
   sources: PropTypes.array,
   poster: PropTypes.string,
   disablePictureInPicture: PropTypes.bool,
-  autoPictureInPicture: PropTypes.bool,
   onCanPlay: PropTypes.func,
   onPlay: PropTypes.func,
   onPlaying: PropTypes.func,

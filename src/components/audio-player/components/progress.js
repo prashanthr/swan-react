@@ -1,15 +1,16 @@
 import React, { createElement, createRef } from 'react'
 import PropTypes from 'prop-types'
 
-const ProgressBar = ({ value, currentTime, duration, onProgressSeek, className, customComponent }) => {
+const ProgressBar = ({ value, currentTime, duration, onProgressSeek, className, CustomComponent }) => {
   let progressRef = createRef()
   return (
     (
-      customComponent && createElement(<customComponent />, {
+      CustomComponent && createElement(<CustomComponent />, {
         value,
         currentTime,
         duration,
-        onProgressSeek
+        onProgressSeek,
+        className
       })
     ) || <progress
           role={'none'}
@@ -30,7 +31,7 @@ ProgressBar.propTypes = {
   duration: PropTypes.number,
   onProgressSeek: PropTypes.func,
   className: PropTypes.string,
-  customComponent: PropTypes.element
+  CustomComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
 }
 
 ProgressBar.defaultProps = {

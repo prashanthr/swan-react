@@ -9,6 +9,7 @@ const PlayerControls = ({
   className,
   progressClassName,
   volumeProgressClassName,
+  durationClassName,
   playPauseCustomComponent,
   progressCustomComponent,
   volumeCustomComponent,
@@ -35,7 +36,7 @@ const PlayerControls = ({
         onProgressSeek={onProgressSeek}
         currentTime={currentTime}
         duration={duration}
-        customComponent={progressCustomComponent}
+        CustomComponent={progressCustomComponent}
       />
     </div>
     <div className='swan-audio-player-player-controls-volume-duration-grid'>
@@ -49,10 +50,10 @@ const PlayerControls = ({
         progressClassName={volumeProgressClassName}
       />
       <Duration
-        className='swan-audio-player-controls-duration'
+        className={`swan-audio-player-controls-duration ${durationClassName}`}
         current={currentTime}
         total={duration}
-        customComponent={durationCustomComponent}
+        CustomComponent={durationCustomComponent}
       />
     </div>
   </div>
@@ -62,10 +63,10 @@ PlayerControls.propTypes = {
   className: PropTypes.string,
   progressClassName: PropTypes.string,
   volumeProgressClassName: PropTypes.string,
-  playPauseCustomComponent: PropTypes.element,
-  progressCustomComponent: PropTypes.element,
-  volumeCustomComponent: PropTypes.element,
-  durationCustomComponent: PropTypes.element,
+  playPauseCustomComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
+  progressCustomComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
+  volumeCustomComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
+  durationCustomComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
   isPlaying: PropTypes.bool,
   onPlayPause: PropTypes.func,
   currentTime: PropTypes.number,

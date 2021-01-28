@@ -51,7 +51,7 @@ const VolumeControl = (props) => {
 }
 
 VolumeControl.propTypes = {
-  customComponent: PropTypes.element,
+  CustomComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
   className: PropTypes.string,
   progressClassName: PropTypes.string,
   level: PropTypes.number,
