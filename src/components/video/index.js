@@ -1,21 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Audio = ({
+const Video = ({
   elRef,
   className,
-  src,
-  sources,
-  tracks,
-  showControls,
+  width,
+  height,
   autoPlay,
+  showControls,
   crossOriginMethod,
   shouldLoop,
   muted,
   preloadMethod,
-  onLoadedMetadata,
+  src,
+  sources,
+  poster,
+  disablePictureInPicture,
   onCanPlay,
+  onLoadedMetadata,
   onPlay,
+  onPlaying,
   onVolumeChange,
   onTimeUpdate,
   onEnded,
@@ -24,11 +28,13 @@ const Audio = ({
   onSeeking,
   onStalled,
   onSuspend,
-  onWaiting
+  onWaiting,
 }) => (
-  <audio
+  <video
     ref={elRef}
     className={className}
+    width={width}
+    height={height}
     controls={showControls}
     src={src}
     crossOrigin={crossOriginMethod}
@@ -36,17 +42,20 @@ const Audio = ({
     muted={muted}
     preload={preloadMethod}
     autoPlay={autoPlay}
+    poster={poster}
+    disablePictureInPicture={disablePictureInPicture}
     onLoadedMetadata={onLoadedMetadata}
     onCanPlay={onCanPlay}
     onPlay={onPlay}
+    onPlaying={onPlaying}
     onRateChange={onRateChange}
     onSeeked={onSeeked}
     onSeeking={onSeeking}
     onStalled={onStalled}
     onSuspend={onSuspend}
     onWaiting={onWaiting}
-    onVolumeChange={onVolumeChange}
     onTimeUpdate={onTimeUpdate}
+    onVolumeChange={onVolumeChange}
     onEnded={onEnded}
   >
     {sources.map((source, idx) => (
@@ -56,53 +65,50 @@ const Audio = ({
         type={source.type}
       />
     ))}
-    {tracks.map((track, idx) => (
-      <track
-        key={idx}
-        src={track.src}
-        kind={track.kind}
-        srcLang={track.srclang}
-        label={track.label}
-      />
-    ))}
-  </audio>
+  </video>
 )
 
-Audio.propTypes = {
+Video.propTypes = {
   elRef: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.shape({ current: PropTypes.instanceOf(Element) })
   ]),
   className: PropTypes.string,
+  width: PropTypes.string,
+  height: PropTypes.string,
   autoPlay: PropTypes.bool,
   crossOriginMethod: PropTypes.oneOf(['anonymous', 'use-credentials']),
   shouldLoop: PropTypes.bool,
   muted: PropTypes.bool,
   preloadMethod: PropTypes.oneOf(['none', 'metadata', 'auto']),
+  showControls: PropTypes.bool,
   src: PropTypes.string,
   sources: PropTypes.array,
-  tracks: PropTypes.array,
-  showControls: PropTypes.bool,
-  onLoadedMetadata: PropTypes.func,
+  poster: PropTypes.string,
+  disablePictureInPicture: PropTypes.bool,
   onCanPlay: PropTypes.func,
   onPlay: PropTypes.func,
-  onVolumeChange: PropTypes.func,
-  onTimeUpdate: PropTypes.func,
+  onPlaying: PropTypes.func,
   onEnded: PropTypes.func,
   onRateChange: PropTypes.func,
   onSeeked: PropTypes.func,
   onSeeking: PropTypes.func,
   onStalled: PropTypes.func,
   onSuspend: PropTypes.func,
-  onWaiting: PropTypes.func
+  onWaiting: PropTypes.func,
+  onVolumeChange: PropTypes.func,
+  onTimeUpdate: PropTypes.func,
+  onLoadedMetadata: PropTypes.func,
 }
 
-Audio.defaultProps = {
+Video.defaultProps = {
   className: '',
-  autoPlay: false,
   showControls: true,
-  tracks: [{ kind: 'captions' }],
+  autoPlay: false,
+  shouldLoop: false,
+  muted: false,
+  preloadMethod: 'metadata',
   sources: []
 }
 
-export default Audio
+export default Video

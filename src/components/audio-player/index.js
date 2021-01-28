@@ -29,6 +29,7 @@ const AudioPlayer = ({
   playPauseCustomComponent,
   progressCustomComponent,
   volumeCustomComponent,
+  durationClassName,
   durationCustomComponent
 }) => {
   const [playerState, setPlayerState] = useState({
@@ -69,6 +70,7 @@ const AudioPlayer = ({
           playPauseCustomComponent={playPauseCustomComponent}
           progressCustomComponent={progressCustomComponent}
           volumeCustomComponent={volumeCustomComponent}
+          durationClassName={durationClassName}
           durationCustomComponent={durationCustomComponent}
         />
         <Audio
@@ -94,12 +96,13 @@ AudioPlayer.propTypes = {
   albumArtClassName: PropTypes.string,
   trackInfoClassName: PropTypes.string,
   progressClassName: PropTypes.string,
+  durationClassName: PropTypes.string,
   playerControlsClassName: PropTypes.string,
   volumeProgressClassName: PropTypes.string,
-  playPauseCustomComponent: PropTypes.element,
-  progressCustomComponent: PropTypes.element,
-  volumeCustomComponent: PropTypes.element,
-  durationCustomComponent: PropTypes.element
+  playPauseCustomComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
+  progressCustomComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
+  volumeCustomComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
+  durationCustomComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
   // pin: PropTypes.bool, // Not implemented yet
   // pinDirection // Not implemented yet
 }
@@ -112,7 +115,8 @@ AudioPlayer.defaultProps = {
   trackInfoClassName: '',
   playerControlsClassName: '',
   progressClassName: '',
-  volumeProgressClassName: ''
+  volumeProgressClassName: '',
+  durationClassName: ''
 }
 
 export default AudioPlayer

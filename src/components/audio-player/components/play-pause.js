@@ -4,9 +4,9 @@ import Button from '../../button'
 import playSvg from '../assets/play.svg'
 import pauseSvg from '../assets/pause.svg'
 
-const PlayPause = ({ onPlayPause, isPlaying, customComponent }) => (
-  customComponent
-  ? (cloneElement(<customComponent />, { onClose }))
+const PlayPause = ({ onPlayPause, isPlaying, CustomComponent }) => (
+  CustomComponent
+  ? (cloneElement(<CustomComponent />, { onPlayPause, isPlaying }))
   : <Button
       className='swan-audio-player-button'
       value={<img src={isPlaying ? pauseSvg : playSvg} />}
@@ -16,7 +16,7 @@ const PlayPause = ({ onPlayPause, isPlaying, customComponent }) => (
 
 PlayPause.propTypes = {
   isPlaying: PropTypes.bool,
-  customComponent: PropTypes.element
+  CustomComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
 }
 
 PlayPause.defaultProps = {
