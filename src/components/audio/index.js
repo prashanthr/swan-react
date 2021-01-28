@@ -2,26 +2,54 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Audio = ({
-  onLoadedMetadata,
   elRef,
+  className,
   src,
   sources,
   tracks,
   showControls,
+  autoPlay,
+  crossOriginMethod,
+  disableRemotePlayback,
+  shouldLoop,
+  muted,
+  preloadMethod,
+  onLoadedMetadata,
+  onCanPlay,
   onPlay,
   onVolumeChange,
   onTimeUpdate,
-  className
+  onEnded,
+  onRateChange,
+  onSeeked,
+  onSeeking,
+  onStalled,
+  onSuspend,
+  onWaiting
 }) => (
   <audio
-    onLoadedMetadata={onLoadedMetadata}
     ref={elRef}
-    onPlay={onPlay}
-    onTimeUpdate={onTimeUpdate}
-    onVolumeChange={onVolumeChange}
     className={className}
     controls={showControls}
     src={src}
+    crossOrigin={crossOriginMethod}
+    loop={shouldLoop}
+    muted={muted}
+    preload={preloadMethod}
+    autoPlay={autoPlay}
+    disableRemotePlayback={disableRemotePlayback}
+    onLoadedMetadata={onLoadedMetadata}
+    onCanPlay={onCanPlay}
+    onPlay={onPlay}
+    onRateChange={onRateChange}
+    onSeeked={onSeeked}
+    onSeeking={onSeeking}
+    onStalled={onStalled}
+    onSuspend={onSuspend}
+    onWaiting={onWaiting}
+    onVolumeChange={onVolumeChange}
+    onTimeUpdate={onTimeUpdate}
+    onEnded={onEnded}
   >
     {sources.map((source, idx) => (
       <source
@@ -47,19 +75,34 @@ Audio.propTypes = {
     PropTypes.func,
     PropTypes.shape({ current: PropTypes.instanceOf(Element) })
   ]),
+  className: PropTypes.string,
+  autoPlay: PropTypes.bool,
+  crossOriginMethod: PropTypes.oneOf(['anonymous', 'use-credentials']),
+  disableRemotePlayback: PropTypes.bool,
+  shouldLoop: PropTypes.bool,
+  muted: PropTypes.bool,
+  preloadMethod: PropTypes.oneOf(['none', 'metadata', 'auto']),
   src: PropTypes.string,
   sources: PropTypes.array,
   tracks: PropTypes.array,
   showControls: PropTypes.bool,
+  onLoadedMetadata: PropTypes.func,
+  onCanPlay: PropTypes.func,
   onPlay: PropTypes.func,
   onVolumeChange: PropTypes.func,
   onTimeUpdate: PropTypes.func,
-  onLoadedMetadata: PropTypes.func,
-  className: PropTypes.string,
+  onEnded: PropTypes.func,
+  onRateChange: PropTypes.func,
+  onSeeked: PropTypes.func,
+  onSeeking: PropTypes.func,
+  onStalled: PropTypes.func,
+  onSuspend: PropTypes.func,
+  onWaiting: PropTypes.func
 }
 
 Audio.defaultProps = {
   className: '',
+  autoPlay: false,
   showControls: true,
   tracks: [{ kind: 'captions' }],
   sources: []
