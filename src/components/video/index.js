@@ -9,7 +9,6 @@ const Video = ({
   autoPlay,
   showControls,
   crossOriginMethod,
-  disableRemotePlayback,
   shouldLoop,
   muted,
   preloadMethod,
@@ -40,7 +39,6 @@ const Video = ({
     controls={showControls}
     src={src}
     crossOrigin={crossOriginMethod}
-    disableRemotePlayback={disableRemotePlayback}
     loop={shouldLoop}
     muted={muted}
     preload={preloadMethod}
@@ -82,7 +80,6 @@ Video.propTypes = {
   height: PropTypes.string,
   autoPlay: PropTypes.bool,
   crossOriginMethod: PropTypes.oneOf(['anonymous', 'use-credentials']),
-  disableRemotePlayback: PropTypes.bool,
   shouldLoop: PropTypes.bool,
   muted: PropTypes.bool,
   preloadMethod: PropTypes.oneOf(['none', 'metadata', 'auto']),

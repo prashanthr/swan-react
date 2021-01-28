@@ -28,7 +28,7 @@ const PlayerControls = ({
       <PlayPause
         onPlayPause={onPlayPause}
         isPlaying={isPlaying}
-        customComponent={playPauseCustomComponent}
+        CustomComponent={playPauseCustomComponent}
       />
       <ProgressBar
         className='swan-audio-player-controls-progress'
@@ -45,7 +45,7 @@ const PlayerControls = ({
         level={volumeLevel}
         onToggleMute={onToggleMute}
         onVolumeChange={onVolumeChange}
-        customComponent={volumeCustomComponent}
+        CustomComponent={volumeCustomComponent}
         progressClassName={volumeProgressClassName}
       />
       <Duration

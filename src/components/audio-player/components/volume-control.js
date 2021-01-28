@@ -6,7 +6,7 @@ import volumeOffSvg from '../assets/volume-off.svg'
 
 const VolumeControl = (props) => {
   const {
-    customComponent,
+    CustomComponent,
     className = '',
     progressClassName = '',
     level,
@@ -19,11 +19,14 @@ const VolumeControl = (props) => {
 
   return (
     (
-      customComponent && cloneElement(<customComponent />, {
+      CustomComponent && cloneElement(<CustomComponent />, {
         onToggleMute,
         onVolumeChange,
         isMuted,
-        level
+        level,
+        volumeProgressRef,
+        className,
+        progressClassName
       })
     )
     || (

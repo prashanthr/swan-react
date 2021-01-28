@@ -10,7 +10,6 @@ const Audio = ({
   showControls,
   autoPlay,
   crossOriginMethod,
-  disableRemotePlayback,
   shouldLoop,
   muted,
   preloadMethod,
@@ -37,7 +36,6 @@ const Audio = ({
     muted={muted}
     preload={preloadMethod}
     autoPlay={autoPlay}
-    disableRemotePlayback={disableRemotePlayback}
     onLoadedMetadata={onLoadedMetadata}
     onCanPlay={onCanPlay}
     onPlay={onPlay}
@@ -78,7 +76,6 @@ Audio.propTypes = {
   className: PropTypes.string,
   autoPlay: PropTypes.bool,
   crossOriginMethod: PropTypes.oneOf(['anonymous', 'use-credentials']),
-  disableRemotePlayback: PropTypes.bool,
   shouldLoop: PropTypes.bool,
   muted: PropTypes.bool,
   preloadMethod: PropTypes.oneOf(['none', 'metadata', 'auto']),
