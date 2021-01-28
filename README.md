@@ -1,6 +1,8 @@
-# swan-react
+# Swan React
 
-Re-usable React Components
+![](assets/images/logo.png)
+
+Lightweight re-usable React Components
 
 ## Demo
 
@@ -25,7 +27,6 @@ npm i @universal-apps/swan-react
 - FormControls
 - Emoji
 - Modal
-- Notifications (Coming soon)
 - ReCaptcha v2/v3
 - Spotify Player Widget
 - Timer (Stopwatch, Countdown and Circular Progress)
